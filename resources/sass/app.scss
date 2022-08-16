@@ -1,0 +1,14 @@
+// Variables
+@import "variables";
+
+// Bootstrap, with variable replaced
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Shared
+@import "global";
+@import "header";
+
+// Specific to some pages
+@import "people";
+@import "office";
+@import "family_tree";

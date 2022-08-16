@@ -1,0 +1,79 @@
+body {
+    background-color: $window-bg;
+}
+
+
+
+.text-justify {
+    text-align: justify;
+}
+
+
+
+.hBack {
+    cursor: pointer;
+}
+
+
+.photo-gallery img {
+    height: 250px;
+    object-fit: cover;
+}
+
+
+
+
+.list-striped {
+    background-color: var(--bs-table-bg);
+}
+
+.list-striped > .list-group-item:nth-child(odd) {
+    background-color: $table-striped-bg;
+    color: $table-striped-color;
+}
+
+.list-striped > .list-group-item:hover {
+    background-color: $table-hover-bg;
+    color: $table-hover-color;
+}
+
+
+
+.grayscale {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+
+.bg-filter {
+    background-image: url('/storage/pictures/icons/logo_wemad_black_notext_transparent.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.hover-invert:hover {
+    transition: all .2s ease;
+    box-shadow: inset 0 0 0 99999px rgba(0,0,0,.1);
+}
+
+span[data-bs-toggle="tooltip"] {
+    border-bottom: 1px dotted #000;
+    text-decoration: none;
+    cursor: help;
+}
+
+.inline-icon {
+    height: 1em;
+}
+
+.navbar-light .nav-item:hover {
+    background-color: rgba($primary, .1);
+}
+
+.form-control:focus,
+.btn-group .btn:focus,
+.btn-group > .btn-check:focus + .btn,
+.btn:focus {
+    box-shadow: none;
+}
