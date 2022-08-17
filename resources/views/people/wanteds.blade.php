@@ -23,7 +23,14 @@
                         @else
                             <img src="{{ URL::asset('/storage/pictures/profile-unknown.png') }}" alt="" class="img-fluid card-img-top">
                         @endisset
-                        <h5 class="p-2 text-center"> <a href="{{ url('wanted/'.$wanted->id) }}" class="text-dark">{{$wanted->first_name}} {{$wanted->last_name}}</a></h5>
+                        @php
+                            if ($wanted->status == "wanted") {
+                                $status = 'fugitives';
+                            } elseif ($wanted->status == "missing") {
+                                $status = 'missing';
+                            }
+                        @endphp
+                        <h5 class="p-2 text-center"> <a href="{{ url('wanteds/'.$status.'/'.$wanted->id) }}" class="text-dark">{{$wanted->first_name}} {{$wanted->last_name}}</a></h5>
                     </div>
                 </div>
                 <!-- End -->

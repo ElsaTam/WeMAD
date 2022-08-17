@@ -13,20 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',                 'PagesController@getHome');
-Route::get('links/',            'PagesController@getLinks');
+Route::get('/', function () { return view('home'); });
+Route::get('links/', function () { return view('links'); });
 
 Route::get('contact/',          'MessagesController@getMessages');
 Route::post('contact/submit',   'MessagesController@submit');
 
-Route::get('wanted/10-most-wanted-fugitives', 'PersonController@getMostWantedFugitives');
-Route::get('wanted/fugitives', 'PersonController@getFugitives');
-Route::get('wanted/missings', 'PersonController@getMissings');
+Route::get('wanteds/10-most-wanted-fugitives', 'PersonController@getMostWantedFugitives');
+Route::get('wanteds/fugitives', 'PersonController@getFugitives');
+Route::get('wanteds/missings', 'PersonController@getMissings');
 
-Route::get('agent/{id}', 'PersonController@getPerson');
-Route::get('wanted/{id}', 'PersonController@getPerson');
-Route::get('missing/{id}', 'PersonController@getPerson');
-Route::get('civilian/{id}', 'PersonController@getPerson');
+Route::get('agents/{id}', 'PersonController@getPerson');
+Route::get('wanteds/fugitives/{id}', 'PersonController@getPerson');
+Route::get('wanteds/missing/{id}', 'PersonController@getPerson');
+Route::get('civilians/{id}', 'PersonController@getPerson');
 
 
 

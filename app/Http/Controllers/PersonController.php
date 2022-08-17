@@ -3,15 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Person;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\LengthAwarePaginator;
+use App\Models\People\Person;
 
 class PersonController extends Controller
 {
     public function getMostWantedFugitives() {
         $wanteds = Person::with('featuredPhoto')
-                    ->where('type', 'Wanted')
-                    ->where('most_wanted', True)
+                    ->where('status', 'wanted')
+                    ->join('criminal_records', 'people.id', '=', 'criminal_records.person_id')
+                    ->where('criminal_records.most_wanted', True)
                     ->get();
 
         return view('people/wanteds')
@@ -21,7 +23,7 @@ class PersonController extends Controller
 
     public function getFugitives() {
         $wanteds = Person::with('featuredPhoto')
-                    ->where('type', 'Wanted')
+                    ->where('status', 'wanted')
                     ->get();
 
         return view('people/wanteds')
@@ -31,7 +33,7 @@ class PersonController extends Controller
 
     public function getMissings() {
         $wanteds = Person::with('featuredPhoto')
-                    ->where('type', 'Missing')
+                    ->where('status', 'missing')
                     ->get();
 
         return view('people/wanteds')
@@ -42,13 +44,14 @@ class PersonController extends Controller
     public function getPerson($id) {
         $person = Person::find($id);
 
-        switch ($person->type) {
-            case 'Wanted':
-            case 'Missing':
-                return view('people/person-wanted')->with('wanted', $person);
-            case 'Agent':
+        switch ($person->status) {
+            case 'wanted':
+                return view('people/wanted-profile')->with('wanted', $person);
+            case 'missing':
+                return view('people/missing-profile')->with('missing', $person);
+            case 'agent':
                 return view('people/agent-profile')->with('agent', $person);
-            case 'Civilian':
+            case 'civilian':
                 return view('people/civilian-profile')->with('civilian', $person);
         }
     }

@@ -9,19 +9,19 @@ class PhotoSeeder extends Seeder
         // Basriel Nix
         DB::table('photos')->insert([
             'id' => "basrielnix_2",
-            'src' => "/storage/pictures/wanted/Basriel_Nix_2.jpg",
+            'src' => "/storage/pictures/wanteds/Basriel_Nix_2.jpg",
             'person_id' => "basrielnix"
         ]);
         
         // Clayton Moore, Le Doc
         DB::table('photos')->insert([
             'id' => "claytonmoore_2",
-            'src' => "/storage/pictures/wanted/Clayton_Moore_2.jpg",
+            'src' => "/storage/pictures/wanteds/Clayton_Moore_2.jpg",
             'person_id' => "claytonmoore"
         ]);
         DB::table('photos')->insert([
             'id' => "claytonmoore_3",
-            'src' => "/storage/pictures/wanted/Clayton_Moore_3.jpg",
+            'src' => "/storage/pictures/wanteds/Clayton_Moore_3.jpg",
             'person_id' => "claytonmoore"
         ]);
         
@@ -29,7 +29,7 @@ class PhotoSeeder extends Seeder
         DB::table('photos')->updateOrInsert(
             ['id' => "hommemasque_1"],
             [
-                'src' => "/storage/pictures/wanted/Masque.jpg",
+                'src' => "/storage/pictures/wanteds/Masque.jpg",
                 'person_id' => "hommemasque"
             ]
         );

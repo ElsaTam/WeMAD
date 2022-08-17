@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Person;
-use App\Place;
-use App\Office;
-use App\Group;
+use App\Models\People\Person;
+use App\Models\Places\Place;
+use App\Models\Places\Office;
+use App\Models\Groups\Group;
 
 class OfficeController extends Controller
 {

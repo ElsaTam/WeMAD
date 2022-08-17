@@ -36,11 +36,11 @@ use App\Custom\Date;
     </tr>
     <tr>
         <td class="border">
-            <span class="fw-bold">Espèce : </span>{{ $person->kind ?: 'N/A'}}
-            @if( isset($person->vampire->sire) )
-                ({{ $person->vampire->sire->sex == "Homme" ? "Sire" : "Dame" }} :
-                <a href="{{ url(strtolower($person->type).'/'.$person->vampire->sire_id) }}">
-                    {{ $person->vampire->sire->first_name }} {{ $person->vampire->sire->last_name }})
+            <span class="fw-bold">Espèce : </span>{{ $person->type ?: 'N/A'}}
+            @if( isset($person->sire) )
+                ({{ $person->sire->sex == "Homme" ? "Sire" : "Dame" }} :
+                <a href="{{ url(strtolower($person->type).'/'.$person->sire_id) }}">
+                    {{ $person->sire->first_name }} {{ $person->sire->last_name }})
                 </a>
             @endif
         </td>

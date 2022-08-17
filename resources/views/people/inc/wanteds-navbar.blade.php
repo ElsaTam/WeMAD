@@ -8,9 +8,9 @@
             </button>
             <div class="collapse navbar-collapse bg-light" id="navbarNavAltMarkup">
                 <div class="navbar-nav container-fluid p-0">
-                <a class="nav-item nav-link flex-fill border p-1 text-center" href="{{ url('wanted/10-most-wanted-fugitives') }}">10 fugitifs les plus recherchés</a>
-                <a class="nav-item nav-link flex-fill border p-1 text-center" href="{{ url('wanted/fugitives') }}">Fugitifs</a>
-                <a class="nav-item nav-link flex-fill border p-1 text-center" href="{{ url('wanted/missings') }}">Personnes disparues</a>
+                <a class="nav-item nav-link flex-fill border p-1 text-center" href="{{ url('wanteds/10-most-wanted-fugitives') }}">10 fugitifs les plus recherchés</a>
+                <a class="nav-item nav-link flex-fill border p-1 text-center" href="{{ url('wanteds/fugitives') }}">Fugitifs</a>
+                <a class="nav-item nav-link flex-fill border p-1 text-center" href="{{ url('wanteds/missings') }}">Personnes disparues</a>
                 <a class="nav-item nav-link flex-fill border p-1 text-center disabled">Archives</a>
                 </div>
             </div>
