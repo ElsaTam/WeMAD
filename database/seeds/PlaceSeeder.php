@@ -13,7 +13,8 @@ class PlaceSeeder extends Seeder
                 'id' => $id,
                 'type' => 'office',
                 'name' => $value['name'],
-                'state_id' => $value['state_id']
+                'state_id' => $value['state_id'],
+                'boss_id' => NULL // Will be updated once the boss is inserted in wemad.people table
             ]);
         }
     }
@@ -27,7 +28,8 @@ class PlaceSeeder extends Seeder
                 'type' => 'prison',
                 'name' => $value['name'],
                 'state_id' => $value['state_id'],
-                'security_level' => $value['security_level']
+                'security_level' => $value['security_level'],
+                'boss_id' => NULL // Will be updated once the boss is inserted in wemad.people table
             ]);
         }
     }

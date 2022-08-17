@@ -28,7 +28,7 @@ class CriminalRecordSeeder extends Seeder
      */
     public function run()
     {
-        $this->seed_handmade();
         $this->seed_generated();
+        $this->seed_handmade();
     }
 }

@@ -44,7 +44,7 @@ class GroupSeeder extends Seeder
         // Insert every group without reference to the leader
         $groups_copy = $groups;
         foreach ($groups_copy as $key => $group) {
-            $groups_copy[$key]['leader_id'] = NULL;
+            $groups_copy[$key]['leader_id'] = NULL; // Will be updated once the leader has been inserted in wemad.people table
         }
         DB::table('groups')->insert($groups_copy);
     }
@@ -60,6 +60,8 @@ class GroupSeeder extends Seeder
         
         include 'generated\Groups.php';
         $this->insert_groups($groups_generated); // generated
-        $this->insert_groups(array_merge($clans, $circles, $packs)); // handmade
+
+        include 'handmade\Groups.php';
+        $this->insert_groups($groups); // handmade
     }
 }

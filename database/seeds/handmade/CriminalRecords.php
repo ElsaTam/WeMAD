@@ -56,7 +56,7 @@ $criminal_records = array(
         'danger' => NULL
     ),
     
-    // L'male Masque
+    // L'Homme Masque
     array(
         'person_id' => "hommemasque",
         'most_wanted' => true,
