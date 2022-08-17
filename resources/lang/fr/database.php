@@ -28,5 +28,8 @@ return [
 
     'west' => "Ouest",
     'center' => "Centre",
-    'east' => "Est"
+    'east' => "Est",
+
+    'office' => "Agence",
+    'prison' => "Prison"
 ];

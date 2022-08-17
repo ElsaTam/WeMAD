@@ -23,9 +23,11 @@ Route::get('wanteds/10-most-wanted-fugitives', 'PersonController@getMostWantedFu
 Route::get('wanteds/fugitives', 'PersonController@getFugitives');
 Route::get('wanteds/missings', 'PersonController@getMissings');
 
+
 Route::get('agents/{id}', 'PersonController@getPerson');
 Route::get('wanteds/fugitives/{id}', 'PersonController@getPerson');
 Route::get('wanteds/missing/{id}', 'PersonController@getPerson');
+Route::get('prisoners/{id}', 'PersonController@getPerson');
 Route::get('civilians/{id}', 'PersonController@getPerson');
 
 

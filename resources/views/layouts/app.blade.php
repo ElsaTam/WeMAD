@@ -22,6 +22,13 @@
 
     <body>
 
+        @isset($debug)
+            <div class='bg-warning p-3'>
+                <h5>DEBUG</h5>
+                {{ $debug }}<br>
+            </div>
+        @endisset
+
         @include('inc.header')
 
         <div class="container bg-white p-0">

@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\LengthAwarePaginator;
 use App\Models\People\Person;
 use App\Models\People\Human;
+use App\Models\People\Vampire;
 
 class PersonController extends Controller
 {
@@ -64,15 +65,20 @@ class PersonController extends Controller
         $name = $request->input('name');
         $office = $request->input('office');
         $languages = $request->input('languages');
-        $kind = $request->input('kind');
+        $type = $request->input('type');
         $sex = $request->input('gender');
         $status = $request->input('status');
         $renegade = $request->input('renegade');
+        $dead = $request->input('dead');
         $ethnic_group = $request->input('ethnicGroup');
-        $situation = $request->input('situation');
+        $height = $request->input('height');
+        $weight = $request->input('weight');
+        $hair = $request->input('hair');
+        $eyes = $request->input('eyes');
     
         // Search in the title and body columns from the posts table
         $search_query = Person::query();
+        //$search_query = DB::table('people');
 
         if ($name) {
             $search_query = $search_query->where(function($query) use ($name) {
@@ -94,23 +100,8 @@ class PersonController extends Controller
             });
         }
 
-        if ($kind) {
-            $kinds = explode('_', $kind);
-            if (count($kinds) > 0) {
-                $search_query = $search_query->where(function($query) use ($kinds) {
-                    for ($i = 0; $i < count($kinds); ++$i) {
-                        $query->orWhere('kind', $kinds[$i]);
-                    }
-                });
-            }
-        }
-        else {
-            $search_query = $search_query->where(function($query) {
-                $query->where('kind', 'Humain')
-                      ->orWhere('kind', 'Loup-Garou')
-                      ->orWhere('kind', 'Sorcier')
-                      ->orWhere('kind', 'Vampire');
-            });
+        if ($type) {
+            $search_query = $search_query->whereIn('type', explode('_', $type));
         }
 
         if ($sex) {
@@ -118,73 +109,47 @@ class PersonController extends Controller
         }
 
         if ($status) {
-            $search_query = $search_query->where('type', $status);
+            $search_query = $search_query->whereIn('status', explode('_', $status));
         }
 
         if ($renegade == '0') {
-            $search_query = $search_query->leftjoin('vampires', 'people.id', '=', 'vampires.person_id')
-                                         ->leftjoin('warlocks', 'people.id', '=', 'warlocks.person_id')
-                                         ->leftjoin('werewolves', 'people.id', '=', 'werewolves.person_id');
-            $search_query = $search_query->where(function($query) {
-                $query->where('vampires.clan_id', '!=', NULL)
-                      ->orWhere('warlocks.circle_id', '!=', NULL)
-                      ->orWhere('werewolves.pack_id', '!=', NULL);
-            });
-            $search_query = $search_query->select('people.*');
+            $search_query = $search_query->where('group_id', '!=', NULL);
         }
         else if ($renegade == '1') {
-            $search_query = $search_query->where(function($query) {
-                $query->where('kind', 'Loup-Garou')
-                      ->orWhere('kind', 'Sorcier')
-                      ->orWhere('kind', 'Vampire');
-            });
-            $search_query = $search_query->leftjoin('vampires', 'people.id', '=', 'vampires.person_id')
-                                         ->leftjoin('warlocks', 'people.id', '=', 'warlocks.person_id')
-                                         ->leftjoin('werewolves', 'people.id', '=', 'werewolves.person_id');
-            $search_query = $search_query->where('vampires.clan_id', NULL)
-                                         ->where('warlocks.circle_id', NULL)
-                                         ->where('werewolves.pack_id', NULL);
-            $search_query = $search_query->select('people.*');
+            $search_query = $search_query->where('dead', 0)
+                                         ->where('group_id', NULL)
+                                         ->whereIn('type', ['vampire', 'warlock', 'werewolf', 'faery']);
+        }
+
+        if ($dead == '0') {
+            $search_query = $search_query->where('dead', 0);
+        }
+        else if ($dead == '1') {
+            $search_query = $search_query->where('dead', 1);
         }
 
         if ($ethnic_group) {
-            $groups = explode('_', $ethnic_group);
-            if (count($groups) > 0) {
-                $search_query = $search_query->where(function($query) use ($groups) {
-                    for ($i = 0; $i < count($groups); ++$i) {
-                        $query->orWhere('ethnic_group', $groups[$i]);
-                    }
-                });
-            }
+            $search_query = $search_query->whereIn('ethnic_group', explode('_', $ethnic_group));
         }
-        
-        if ($situation) {
-            $situations = explode('_', $situation);
-            if (count($situations) > 0) {
-                $search_query = $search_query->where(function($query) use ($situations) {
-                    for ($i = 0; $i < count($situations); ++$i) {
-                        if ($situations[$i] == "None") {
-                            $query->orWhere(function($query) {
-                                $query->where('type', '!=', 'Wanted')
-                                      ->where('type', '!=', 'Missing')
-                                      ->where(function($query) {
-                                        $query->where('place_id', 'NOT LIKE', 'prison_%')
-                                              ->orWhere('type', 'Agent');
-                                        });
-                            });
-                        }
-                        else if ($situations[$i] == "Prison") {
-                            $query->orWhere(function($query) {
-                                $query->where('place_id', 'LIKE', 'prison_%')
-                                      ->Where('type', '!=', 'Agent');
-                            });
-                        }
-                        else {
-                            $query->orWhere('type', $situations[$i]);
-                        }
-                    }
-                });
-            }
+
+        if ($height) {
+            $min = explode('_', $height)[0];
+            $max = explode('_', $height)[1];
+            $search_query = $search_query->where('height', '>=', $min)->where('height', '<=', $max);
+        }
+
+        if ($weight) {
+            $min = explode('_', $weight)[0];
+            $max = explode('_', $weight)[1];
+            $search_query = $search_query->where('weight', '>=', $min)->where('weight', '<=', $max);
+        }
+
+        if ($hair) {
+            $search_query = $search_query->whereIn('hair', explode('_', $hair));
+        }
+
+        if ($eyes) {
+            $search_query = $search_query->whereIn('eyes', explode('_', $eyes));
         }
 
         $results = $search_query->orderBy('last_name')->orderBy('first_name')

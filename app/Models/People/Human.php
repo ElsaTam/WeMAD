@@ -41,8 +41,20 @@ class Human extends Person
     //           MUTATORS
     // -----------------------------
 
+    public function getIsPrisonerAttribute() {
+        return $this->status == "prisoner" && ! $this->dead;
+    }
+
+    public function getIsWantedAttribute() {
+        return $this->status == "wanted" && ! $this->dead;
+    }
+
+    public function getIsMissingAttribute() {
+        return $this->status == "missing" && ! $this->dead;
+    }
+
     public function getEthnicGroupAttribute($value)
     {
-        return trans('database.'.$value);
+        return $this->disableMutator ? $value : trans('database.'.$value);
     }
 }

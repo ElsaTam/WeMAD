@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Demon extends Person
 {
-    use \App\Models\Child;
+    protected static $singleTableType = 'demon';
     
     protected $fillable = [
         

@@ -12,10 +12,23 @@ class HiddenHuman extends Human
         'group_id'
     ];
 
+    // -----------------------------
+    //         RELATIONSHIPS
+    // -----------------------------
+
     /**
      * Get the group associated with the creature (clan, circle, pack, ...).
     */
     public function group() {
         return $this->belongsTo(App\Models\Groups\Group::class, 'group_id', 'id');
+    }
+
+
+    // -----------------------------
+    //           MUTATORS
+    // -----------------------------
+
+    public function getIsRenegadeAttribute() {
+        return $this->group_id == NULL && ! $this->dead;
     }
 }

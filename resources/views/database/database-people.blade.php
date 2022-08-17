@@ -21,64 +21,65 @@ use App\Custom\StringHelpers;
     @if(count($results) > 0)
         {{ $results->links() }}
         <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-2 mb-3">
+            
             @foreach($results as $person)
                 <div class="col">
                     <div class="card h-100 bg-light rounded-0 justify-content-center">
+
                         <div class="card-body">
+
+                            <!-- NAME -->
+
                             <p class="card-title fw-bold">
-                                @php
-                                    $link = "#";
-                                    if ($person->type == "Agent") {
-                                        $link = 'agent/'.$person->id;
-                                    }
-                                    elseif ($person->type == "Wanted") {
-                                        $link = 'wanted/'.$person->id;
-                                    }
-                                    elseif ($person->type == "Missing") {
-                                        $link = 'missing/'.$person->id;
-                                    }
-                                    else {
-                                        $link = 'civilian/'.$person->id;
-                                    }
-                                @endphp
-                                <a class="stretched-link text-decoration-none link-dark" href="{{ url($link) }}">
-                                    {{ $person->sex == "Homme" ? "Mr." : "Mme." }} <span class="text-uppercase">{{ $person->last_name }}</span> {{ $person->first_name }}
+                                <a class="stretched-link text-decoration-none link-dark" href="{{ url($person->link) }}">
+                                    {{ $person->title }} {{ $person->last_first_name }}
                                 </a>
                             </p>
                             <p class="card-text">
+
+                                <!-- TYPE or AGENT -->
+
                                 <i class="fa-solid fa-user"></i>
-                                <span class="fw-bold">
-                                    @if ($person->type == "Civilian" || $person->type == "Wanted" || $person->type == "Missing")
-                                        Civil,
-                                    @elseif ($person->type == "Agent")
-                                        Agent,
-                                    @endif
-                                </span>{{ $person->kind }}<br>
-                                <i class="fa-solid fa-location-pin"></i>
-                                <span class="fw-bold">
-                                @if(isset( $person->place->prison ))
-                                    Prison
-                                @elseif(isset( $person->place->office ))
-                                    Agence
+                                @if ($person->status == "agent")
+                                    <span class="fw-bold">Agent</span><br>
+                                @else
+                                    {{ $person->type }}<br>
                                 @endif
-                                </span>
-                                {{ $person->place->name }}, {{ $person->place->state->name }} ({{ $person->place->state_id }})<br>
+
+                                <!-- PLACE -->
+                                
+                                @isset($person->place)
+                                    <i class="fa-solid fa-location-pin"></i>
+                                    <span class="fw-bold">{{ $person->place->type }}</span> {{ $person->place->full_name }}<br>
+                                @endisset
                             </p>
                         </div>
+
+
+
+                        <!-- BADGES FOR STATUS -->
+
                         <div class="d-flex flex-column gap-1 position-absolute top-0 end-0 m-2">
-                        @if( isset( $person->place->prison ) )
-                            <span class="badge bg-warning p-2">En prison</span>
-                        @elseif( $person->type == "Wanted" )
-                            <span class="badge bg-danger p-2">Fugitif</span>
-                        @elseif( $person->type == "Missing" )
-                            <span class="badge bg-danger p-2">Disparu</span>
-                        @elseif( (isset($person->vampire) && !$person->vampire->clan ) || (isset($person->warlock) && !$person->warlock->circle ) || (isset($person->werewolf) && !$person->werewolf->pack ) )
-                            <span class="badge bg-info p-2">Renégat</span>
-                        @endif
+                            @if ($person->is_prisoner)
+                                <span class="badge bg-warning p-2"><i class="fa-solid fa-handcuffs me-2 fa-lg"></i> En prison</span><br>
+                            @endif
+                            @if ($person->is_wanted)
+                                <span class="badge bg-danger p-2"><i class="fa-solid fa-circle-exclamation me-2 fa-lg"></i> Fugitif</span><br>
+                            @endif
+                            @if ($person->is_missing)
+                                <span class="badge bg-danger p-2"><i class="fa-solid fa-circle-question me-2 fa-lg"></i> Disparu</span><br>
+                            @endif
+                            @if ($person->is_renegade)
+                                <span class="badge bg-info p-2"><i class="fa-solid fa-person-rays me-2 fa-lg"></i> Renégat</span>
+                            @endif
+                            @if ($person->dead)
+                                <span class="badge bg-dark p-2"><i class="fa-solid fa-skull me-2 fa-lg"></i> Morte</span>
+                            @endif
                         </div>
                     </div>
                 </div>
             @endforeach
+
         </div>
         {{ $results->links() }}
     @endif

@@ -25,6 +25,10 @@ class Place extends Model
         'state_id'
     ];
 
+    // -----------------------------
+    //         RELATIONSHIPS
+    // -----------------------------
+
     public function boss()
     {
         return $this->hasOne(Human::class, 'id', 'boss_id');
@@ -33,5 +37,20 @@ class Place extends Model
     public function state()
     {
         return $this->belongsTo(State::class, 'state_id');
+    }
+
+
+    // -----------------------------
+    //           MUTATORS
+    // -----------------------------
+
+    public function getFullNameAttribute()
+    {
+        return $this->name.', '.$this->state->name.' ('.$this->state_id.')';
+    }
+
+    public function getTypeAttribute($value)
+    {
+        return trans('database.'.$value);
     }
 }

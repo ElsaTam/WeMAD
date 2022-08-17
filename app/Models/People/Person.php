@@ -15,6 +15,7 @@ class Person extends Model
     protected $table = 'people';
     protected static $singleTableTypeField = 'type';
     protected static $singleTableSubclasses = [Human::class, Demon::class];
+    protected static $singleTableType = 'unknown';
 
     public $incrementing = false;
     protected $keyType = 'string';
@@ -55,13 +56,50 @@ class Person extends Model
     //           MUTATORS
     // -----------------------------
 
+    protected $disableMutator = False;
+
+    public function getFirstLastNameAttribute()
+    {
+        return $this->first_name." ".strtoupper($this->last_name);
+    }
+
+    public function getTitleAttribute()
+    {
+        $this->disableMutator = True;
+        $title = $this->sex == "male" ? "Mr." : "Mme.";
+        $this->disableMutator = False;
+        return $title;
+    }
+
+    public function getLinkAttribute()
+    {
+        $this->disableMutator = True;
+        $link = "#";
+        if ($this->status == "wanted") {
+            $link = 'wanteds/fugitives/'.$this->id;
+        }
+        elseif ($this->status == "missing") {
+            $link = 'wanteds/missings/'.$this->id;
+        }
+        else {
+            $link = $this->status.'s/'.$this->id;
+        }
+        $this->disableMutator = False;
+        return $link;
+    }
+
+    public function getLastFirstNameAttribute()
+    {
+        return strtoupper($this->last_name)." ".$this->first_name;
+    }
+
     public function getSexAttribute($value)
     {
-        return trans('database.'.$value);
+        return $this->disableMutator ? $value : trans('database.'.$value);
     }
 
     public function getTypeAttribute($value)
     {
-        return trans('database.'.$value);
+        return $this->disableMutator ? $value : trans('database.'.$value);
     }
 }
