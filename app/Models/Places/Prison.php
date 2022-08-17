@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Places;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Places\Place;
 
 class Prison extends Place
 {
-    use \App\Models\Child;
+    protected static $singleTableType = 'prison';
 
     protected $fillable = [
         'security_level'

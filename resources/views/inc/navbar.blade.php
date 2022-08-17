@@ -8,7 +8,7 @@
             <div class="navbar-nav me-auto mb-2 mb-lg-0">
                 <a class="nav-item nav-link" href="{{ url('/') }}">Accueil</a>
                 <a class="nav-item nav-link disabled" href="{{ url('news/') }}">Actualités</a>
-                <a class="nav-item nav-link" href="{{ url('wanted/10-most-wanted-fugitives') }}">Personnes recherchées</a>
+                <a class="nav-item nav-link" href="{{ url('wanteds/10-most-wanted-fugitives') }}">Personnes recherchées</a>
                 <a class="nav-item nav-link" href="{{ url('database/') }}">Bases de données</a>
                 <a class="nav-item nav-link" href="{{ url('ressources/') }}">Ressources</a>
                 <a class="nav-item nav-link" href="{{ url('offices/') }}">Agences</a>

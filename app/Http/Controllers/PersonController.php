@@ -6,11 +6,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\LengthAwarePaginator;
 use App\Models\People\Person;
+use App\Models\People\Human;
 
 class PersonController extends Controller
 {
     public function getMostWantedFugitives() {
-        $wanteds = Person::with('featuredPhoto')
+        $wanteds = Human::with('featuredPhoto')
                     ->where('status', 'wanted')
                     ->join('criminal_records', 'people.id', '=', 'criminal_records.person_id')
                     ->where('criminal_records.most_wanted', True)
@@ -22,7 +23,7 @@ class PersonController extends Controller
     }
 
     public function getFugitives() {
-        $wanteds = Person::with('featuredPhoto')
+        $wanteds = Human::with('featuredPhoto')
                     ->where('status', 'wanted')
                     ->get();
 
@@ -32,7 +33,7 @@ class PersonController extends Controller
     }
 
     public function getMissings() {
-        $wanteds = Person::with('featuredPhoto')
+        $wanteds = Human::with('featuredPhoto')
                     ->where('status', 'missing')
                     ->get();
 
@@ -42,7 +43,7 @@ class PersonController extends Controller
     }
 
     public function getPerson($id) {
-        $person = Person::find($id);
+        $person = Human::find($id);
 
         switch ($person->status) {
             case 'wanted':

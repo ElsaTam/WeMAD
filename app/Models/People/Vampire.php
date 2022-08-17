@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Vampire extends HiddenHuman
 {
-    use \App\Models\Child;
+    protected static $singleTableType = 'vampire';
 
     protected $fillable = [
         'sire_id',

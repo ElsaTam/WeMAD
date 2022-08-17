@@ -3,10 +3,13 @@
 namespace App\Models\People;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Places\Place;
+use App\Models\Message;
 
 class Human extends Person
 {
-    use \App\Models\Child;
+    protected static $singleTableSubclasses = [HiddenHuman::class];
+    protected static $singleTableType = 'human';
 
     protected $fillable = [
         'birth_date',
@@ -19,16 +22,27 @@ class Human extends Person
         'place_id'
     ];
 
-    /**
-     * Get the place associated with the person.
-    */
+    // -----------------------------
+    //         RELATIONSHIPS
+    // -----------------------------
+
     public function place()
     {
-        return $this->belongsTo(App\Models\Places\Place::class, 'place_id');
+        return $this->belongsTo(Place::class, 'place_id');
     }
 
     
     public function messages() {
-        return $this->hasMany(App\Models\Message::class, 'author_id');
+        return $this->hasMany(Message::class, 'author_id');
+    }
+
+
+    // -----------------------------
+    //           MUTATORS
+    // -----------------------------
+
+    public function getEthnicGroupAttribute($value)
+    {
+        return trans('database.'.$value);
     }
 }

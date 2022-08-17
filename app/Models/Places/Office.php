@@ -3,10 +3,11 @@
 namespace App\Models\Places;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Places\Place;
 
 class Office extends Place
 {
-    use \App\Models\Child;
+    protected static $singleTableType = 'office';
 
     protected $fillable = [
         

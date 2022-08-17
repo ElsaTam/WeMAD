@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Warlock extends HiddenHuman
 {
-    use \App\Models\Child;
+    protected static $singleTableType = 'warlock';
 
     protected $fillable = [
         'demon_id'

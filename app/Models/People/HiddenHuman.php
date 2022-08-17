@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class HiddenHuman extends Human
 {
-    use \App\Models\Child;
+    protected static $singleTableSubclasses = [Vampire::class, Warlock::class, Werewolf::class];
 
     protected $fillable = [
         'group_id'

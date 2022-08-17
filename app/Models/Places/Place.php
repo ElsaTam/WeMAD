@@ -2,11 +2,19 @@
 
 namespace App\Models\Places;
 
+use Nanigans\SingleTableInheritance\SingleTableInheritanceTrait;
+
 use Illuminate\Database\Eloquent\Model;
+use App\Models\People\Human;
+use App\Models\Places\State;
 
 class Place extends Model
 {
+    use SingleTableInheritanceTrait;
     protected $table = 'places';
+    protected static $singleTableTypeField = 'type';
+    protected static $singleTableSubclasses = [Office::class, Prison::class];
+
     public $incrementing = false;
     protected $keyType = 'string';
 
@@ -19,11 +27,11 @@ class Place extends Model
 
     public function boss()
     {
-        return $this->hasOne(App\Models\People\Human::class, 'id', 'boss_id');
+        return $this->hasOne(Human::class, 'id', 'boss_id');
     }
     
     public function state()
     {
-        return $this->belongsTo(App\Models\Places\State::class, 'state_id');
+        return $this->belongsTo(State::class, 'state_id');
     }
 }

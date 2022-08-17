@@ -15,7 +15,8 @@
         "laravel/framework": "^7.29",
         "laravel/tinker": "^2.5",
         "laravelcollective/html": "^6.2",
-        "stichoza/google-translate-php": "^4.1"
+        "stichoza/google-translate-php": "^4.1",
+        "nanigans/single-table-inheritance": "~1.0"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
