@@ -17,7 +17,7 @@
                     Recherché avancée <i class="fa-solid fa-filter ms-2"></i>
                 </button>
             </div>
-            <div class="ollapse" id="collapseAdvancedSearch" aria-labelledby="headingAdvancedSearch" data-bs-parent="#accordionMessage">
+            <div class="collapse" id="collapseAdvancedSearch" aria-labelledby="headingAdvancedSearch" data-bs-parent="#accordionMessage">
                 <div class="d-flex flex-wrap">
                     <div class="mx-5">
                         <!-- Agence -->

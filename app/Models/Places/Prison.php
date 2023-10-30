@@ -3,7 +3,8 @@
 namespace App\Models\Places;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Places\Place;
+use App\Models\People\Person;
+use App\Models\People\Human;
 
 class Prison extends Place
 {
@@ -15,7 +16,7 @@ class Prison extends Place
     
     public function agents()
     {
-        return $this->hasMany(App\Models\People\Human::class, 'place_id', 'id')
+        return $this->hasMany(Human::class, 'place_id', 'id')
             ->where('people.status', '=', 'agent')
             ->orderBy('people.last_name')
             ->orderBy('people.first_name');
@@ -23,7 +24,7 @@ class Prison extends Place
     
     public function prisoners()
     {
-        return $this->hasMany(App\Models\People\Person::class, 'place_id', 'id')
+        return $this->hasMany(Person::class, 'place_id', 'id')
             ->where('people.status', '=', 'prisoners')
             ->orderBy('people.last_name')
             ->orderBy('people.first_name');

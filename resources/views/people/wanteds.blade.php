@@ -18,19 +18,8 @@
                 <!-- Gallery item -->
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
                     <div class="bg-white rounded shadow-sm">
-                        @isset($wanted->featuredPhoto)
-                            <img src="{{ URL::asset($wanted->featuredPhoto->src) }}" alt="" class="img-fluid card-img-top">
-                        @else
-                            <img src="{{ URL::asset('/storage/pictures/profile-unknown.png') }}" alt="" class="img-fluid card-img-top">
-                        @endisset
-                        @php
-                            if ($wanted->status == "wanted") {
-                                $status = 'fugitives';
-                            } elseif ($wanted->status == "missing") {
-                                $status = 'missing';
-                            }
-                        @endphp
-                        <h5 class="p-2 text-center"> <a href="{{ url('wanteds/'.$status.'/'.$wanted->id) }}" class="text-dark">{{$wanted->first_name}} {{$wanted->last_name}}</a></h5>
+                        <img src="{{ URL::asset($wanted->featuredPhoto) }}" alt="" class="img-fluid card-img-top">
+                        <h5 class="p-2 text-center"> <a href="{{ url($wanted->link) }}" class="text-dark">{{$wanted->first_last_name}}</a></h5>
                     </div>
                 </div>
                 <!-- End -->

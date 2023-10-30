@@ -19,7 +19,7 @@ class StringHelpers
         if ( !preg_match('/[\x80-\xff]/', $str) )
             return $str;
         
-        $unwanted_array = array(
+        $unwanted_array = [
             // Decompositions for Latin-1 Supplement
             chr(195).chr(128) => 'A', chr(195).chr(129) => 'A',
             chr(195).chr(130) => 'A', chr(195).chr(131) => 'A',
@@ -114,7 +114,7 @@ class StringHelpers
             chr(197).chr(186) => 'z', chr(197).chr(187) => 'Z',
             chr(197).chr(188) => 'z', chr(197).chr(189) => 'Z',
             chr(197).chr(190) => 'z', chr(197).chr(191) => 's'
-        );
+        ];
 
         $str = strtr($str, $unwanted_array);
 

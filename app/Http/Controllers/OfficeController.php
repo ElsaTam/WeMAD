@@ -12,7 +12,7 @@ class OfficeController extends Controller
 {
     private function fetchOffices() {
         //return Place::ofType('office')->get()->sortBy('state.id');
-        return Office::all();
+        return Office::all()->sortBy('state.id');
     }
 
     public function getOffices() {
@@ -31,7 +31,7 @@ class OfficeController extends Controller
     
     public function getWestCouncil() {
         $offices = $this->fetchOffices();
-        $council = $offices->where('place.state.council', 'Ouest');
+        $council = $offices->where('state.council', 'west');
 
         return view('offices/offices-council')
                     ->with('council', $council)
@@ -40,7 +40,7 @@ class OfficeController extends Controller
     
     public function getEastCouncil() {
         $offices = $this->fetchOffices();
-        $council = $offices->where('state.council', 'Est');
+        $council = $offices->where('state.council', 'east');
 
         return view('offices/offices-council')
                     ->with('council', $council)
@@ -49,7 +49,7 @@ class OfficeController extends Controller
     
     public function getCenterCouncil() {
         $offices = $this->fetchOffices();
-        $council = $offices->where('state.council', 'Centre');
+        $council = $offices->where('state.council', 'center');
 
         return view('offices/offices-council')
                     ->with('council', $council)
@@ -66,7 +66,7 @@ class OfficeController extends Controller
     }
 
     public function getOffice($id) {
-        $office = Place::find($id);
+        $office = Office::find($id);
 
         $groups = Group::where('office_id', $id)->get();
 

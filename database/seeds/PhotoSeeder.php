@@ -4,28 +4,32 @@ use Illuminate\Database\Seeder;
 
 class PhotoSeeder extends Seeder
 {
+    private function insert_photo(string $id, string $name, $n_photo)
+    {
+        $name = str_replace(' ', '_', $name);
+        for ($i = 2; $i < $n_photo+2; ++$i)
+        {
+            DB::table('photos')->insert([
+                'id' => $id."_".($i),
+                'src' => "/storage/pictures/wanteds/".$name."_".($i).".jpg",
+                'person_id' => $id
+            ]);
+        }
+    }
+
     private function seed_wanteds()
     {
-        // Basriel Nix
-        DB::table('photos')->insert([
-            'id' => "basrielnix_2",
-            'src' => "/storage/pictures/wanteds/Basriel_Nix_2.jpg",
-            'person_id' => "basrielnix"
-        ]);
+        $this->insert_photo("basrielnix", "Basriel Nix", 1);
+        $this->insert_photo("claytonmoore", "Clayton Moore", 2);
+        $this->insert_photo("curtislevesque", "Curtis Levesque", 2);
+        $this->insert_photo("aldocaballero", "Aldo Caballero", 1);
+        $this->insert_photo("lazarethornton", "Lazare Thornton", 2);
+        $this->insert_photo("stevenmaher", "Steven Maher", 2);
+        $this->insert_photo("herschelmayer", "Herschel Mayer", 2);
+        $this->insert_photo("melonyweatherford", "Melony Weatherford", 2);
+        $this->insert_photo("velvetjanssen", "Velvet Janssen", 2);
         
-        // Clayton Moore, Le Doc
-        DB::table('photos')->insert([
-            'id' => "claytonmoore_2",
-            'src' => "/storage/pictures/wanteds/Clayton_Moore_2.jpg",
-            'person_id' => "claytonmoore"
-        ]);
-        DB::table('photos')->insert([
-            'id' => "claytonmoore_3",
-            'src' => "/storage/pictures/wanteds/Clayton_Moore_3.jpg",
-            'person_id' => "claytonmoore"
-        ]);
-        
-        // Clayton Moore, Le Doc
+        // L'homme Masqué
         DB::table('photos')->updateOrInsert(
             ['id' => "hommemasque_1"],
             [

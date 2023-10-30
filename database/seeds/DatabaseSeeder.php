@@ -6,8 +6,13 @@ use App\Models\People\Person;
 use App\Models\People\Vampire;
 use App\Models\People\Warlock;
 use App\Models\People\Werewolf;
-use App\Models\CriminalRecord;
+use App\Models\Records\CriminalRecord;
+use App\Models\Records\PrisonerRecord;
+use App\Models\Records\Crime;
+use App\Faker\Helper;
 use App\Faker\Data\PlacesData;
+use App\Faker\PlaceFaker;
+use App\Faker\CriminalRecordFaker;
 use App\Custom\Date;
 
 class DatabaseSeeder extends Seeder
@@ -26,7 +31,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('states')->delete();
 
-        srand(31);
+        srand(32);
 
         $this->call(StateSeeder::class);
         $this->call(PlaceSeeder::class);
@@ -36,70 +41,174 @@ class DatabaseSeeder extends Seeder
         $this->call(PhotoSeeder::class);
 
         //$this->populate_random();
+        //$this->tmp_random_crimes();
+    }
+
+    private function tmp_random_crimes()
+    {
+        $helper = new Helper();
+
+        $wanteds = Person::where('status', 'wanted')->get();
+        foreach ($wanteds as $wanted) {
+            $n_crimes = $helper->weighted_random([
+                1 => 70,
+                2 => 20,
+                3 => 10
+            ]);
+            $place_faker = new PlaceFaker();
+            $crime_faker = new CriminalRecordFaker();
+            for ($i = 0; $i < $n_crimes; ++$i) {
+                factory(Crime::class)
+                    ->states('wanted')
+                    ->create([
+                        'person_id' => $wanted->id,
+                        'state_id' => $wanted->place->state->id,
+                        'city' => $place_faker->usa_city($wanted->place->state->id),
+                        'date' => $crime_faker->crime_date($wanted->age)
+                    ]);
+                }
+            factory(CriminalRecord::class)
+                ->state($n_crimes.'_crimes')
+                ->create(['person_id' => $wanted->id]);
+        }
+
+        $prisoners = Person::where('status', 'prisoner')->get();
+        foreach ($prisoners as $prisoner) {
+            $n_crimes = $helper->weighted_random([
+                1 => 20, 2 => 70, 3 => 30, 4 => 10, 5 => 10, 6 => 3, 7 => 1, 8 => 1
+            ]);
+            $place_faker = new PlaceFaker();
+            $crime_faker = new CriminalRecordFaker();
+            for ($i = 0; $i < $n_crimes; ++$i) {
+                factory(Crime::class)
+                    ->states('wanted')
+                    ->create([
+                        'person_id' => $prisoner->id,
+                        'state_id' => $prisoner->place->state->id,
+                        'city' => $place_faker->usa_city($prisoner->place->state->id),
+                        'date' => $crime_faker->crime_date($prisoner->age)
+                    ]);
+            }
+            factory(PrisonerRecord::class)
+                ->state($n_crimes.'_crimes')
+                ->create(['person_id' => $prisoner->id]);
+        }
     }
 
 
+    private function insert(string $table, $model) {
+        $data = [];
+        foreach ($model->getAttributes() as $key => $value) {
+            $data[$key] = $value;
+        }
+        DB::table($table)->insert($data);
+    }
+
     private function populate_random()
     {
+        $helper = new Helper();
+
         $offices = PlacesData::offices();
         $prisons = PlacesData::prisons();
 
         $n_wanteds = 212; // 212
-        $n_missings = 43; // 43
+        $n_missings = 0; // 43
         $n_prisoners = [
             'min' => 20, // 20
             'max' => 60 // 60
         ];
         $n_vampires = [
-            'min' => 3, // 3
-            'max' => 10, // 10
-            'renegades' => 228, // 228
-            'deads' => 513 // 513
+            'min' => 0, // 3
+            'max' => 0, // 10
+            'renegades' => 0, // 228
+            'deads' => 0 // 513
         ];
-        $pick_sires = True; // True
+        $pick_sires = False; // True
         $n_warlocks = [
-            'min' => 2, // 2
-            'max' => 7, // 7
-            'renegades' => 68, // 65
+            'min' => 0, // 2
+            'max' => 0, // 7
+            'renegades' => 0, // 65
             'deads' => 0 // 248
         ];
         $n_werewolves = [
-            'min' => 1, // 4
-            'max' => 15, // 15
-            'renegades' => 113, // 113
+            'min' => 0, // 4
+            'max' => 0, // 15
+            'renegades' => 0, // 113
             'deads' => 0 // 1065
         ];
-        $n_humans = 112; // 112
+        $n_humans = 0; // 112
         $n_agents = [
-            'min' => 15, // 15
-            'max' => 30 // 30
+            'min' => 0, // 15
+            'max' => 0 // 30
         ];
 
         // Wanteds
         echo "Seeding Wanteds...\n";
         factory(Person::class, $n_wanteds)
-            ->create(['status' => 'wanted'])
-            ->each(function ($person) {
+            ->make(['status' => 'wanted'])
+            ->each(function ($person) use ($helper) {
+                $this->insert('people', $person);
+                $n_crimes = $helper->weighted_random([
+                    1 => 70,
+                    2 => 20,
+                    3 => 10
+                ]);
+                $place_faker = new PlaceFaker();
+                $crime_faker = new CriminalRecordFaker();
+                for ($i = 0; $i < $n_crimes; ++$i) {
+                    factory(Crime::class)
+                        ->states('wanted')
+                        ->create([
+                            'person_id' => $person->id,
+                            'state_id' => $person->place->state->id,
+                            'city' => $place_faker->usa_city($person->place->state->id),
+                            'date' => $crime_faker->crime_date($person->age)
+                        ]);
+                    }
                 factory(CriminalRecord::class)
-                    ->make(['person_id' => $person->id])
-                    ->save();
+                    ->state($n_crimes.'_crimes')
+                    ->create(['person_id' => $person->id]);
         });
 
         // Missings
         echo "Seeding Missings...\n";
         factory(Person::class, $n_missings)
-            ->create(['status' => 'missing']);
+            ->make(['status' => 'missing'])
+            ->each(function ($person) {
+                $this->insert("people", $person);
+            });
             
-        // Prisoners
+        
+            // Prisoners
         echo "Seeding Prisoners...\n";
         foreach ($prisons as $id => $value) {
             $n_members = $n_prisoners['max'] > $n_prisoners['min'] ? rand($n_prisoners['min'], $n_prisoners['max']) : 0;
             factory(Person::class, $n_members)
-                ->states('human')
-                ->create([
+                ->make([
                     'place_id' => $id,
                     'status' => 'prisoner'
-                ]);
+                ])
+                ->each(function ($person) use ($helper) {
+                    $this->insert('people', $person);
+                    $n_crimes = $helper->weighted_random([
+                        1 => 20, 2 => 70, 3 => 30, 4 => 10, 5 => 10, 6 => 3, 7 => 1, 8 => 1
+                    ]);
+                    $place_faker = new PlaceFaker();
+                    $crime_faker = new CriminalRecordFaker();
+                    for ($i = 0; $i < $n_crimes; ++$i) {
+                        factory(Crime::class)
+                            ->states('wanted')
+                            ->create([
+                                'person_id' => $person->id,
+                                'state_id' => $person->place->state->id,
+                                'city' => $place_faker->usa_city($person->place->state->id),
+                                'date' => $crime_faker->crime_date($person->age)
+                            ]);
+                    }
+                    factory(PrisonerRecord::class)
+                        ->state($n_crimes.'_crimes')
+                        ->create(['person_id' => $person->id]);
+            });
         }
 
         echo "Seeding Vampires...\n";
@@ -140,7 +249,6 @@ class DatabaseSeeder extends Seeder
                 ]);
         }
     }
-
 
     private function random_type(string $state, string $type, $n_people)
     {

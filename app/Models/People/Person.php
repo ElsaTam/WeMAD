@@ -7,7 +7,8 @@ use Nanigans\SingleTableInheritance\SingleTableInheritanceTrait;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Places\Place;
 use App\Models\Photo;
-use App\Models\CriminalRecord;
+use App\Models\Records\CriminalRecord;
+use App\Models\Records\PrisonerRecord;
 
 class Person extends Model
 {
@@ -28,7 +29,8 @@ class Person extends Model
         'sex',
         'height',
         'weight',
-        'dead'
+        'dead',
+        'type'
     ];
 
     // -----------------------------
@@ -49,6 +51,10 @@ class Person extends Model
 
     public function criminalRecord() {
         return $this->hasOne(CriminalRecord::class, 'person_id');
+    }
+
+    public function prisonerRecord() {
+        return $this->hasOne(PrisonerRecord::class, 'person_id');
     }
 
 
@@ -93,6 +99,14 @@ class Person extends Model
         return strtoupper($this->last_name)." ".$this->first_name;
     }
 
+    public function getIsHiddenCreatureAttribute()
+    {
+        $this->disableMutator = True;
+        $is_hidden_creature = $this->type == "vampire" || $this->type == "warlock" || $this->type == "werewolf" || $this->type == "faery";
+        $this->disableMutator = False;
+        return $is_hidden_creature;
+    }
+
     public function getSexAttribute($value)
     {
         return $this->disableMutator ? $value : trans('database.'.$value);
@@ -101,5 +115,10 @@ class Person extends Model
     public function getTypeAttribute($value)
     {
         return $this->disableMutator ? $value : trans('database.'.$value);
+    }
+
+    public function getFeaturedPhotoAttribute($value)
+    {
+        return $this->disableMutator ? $value : ($this->photos()->first() ? $this->photos()->first()->src : '/storage/pictures/profile-unknown.png');
     }
 }

@@ -23,12 +23,12 @@
 .tree li::before, .tree li::after{
 	content: '';
 	position: absolute; top: 0; right: 50%;
-	border-top: 1px solid #ccc;
+	border-top: 1px solid var(--bs-dark);
 	width: 50%; height: 20px;
 }
 .tree li::after{
 	right: auto; left: 50%;
-	border-left: 1px solid #ccc;
+	border-left: 1px solid var(--bs-dark);
 }
 
 /*We need to remove left-right connectors from elements without 
@@ -47,7 +47,7 @@ right connector from last child*/
 }
 /*Adding back the vertical connector to the last nodes*/
 .tree li:last-child::before{
-	border-right: 1px solid #ccc;
+	border-right: 1px solid var(--bs-dark);
 	border-radius: 0 5px 0 0;
 	-webkit-border-radius: 0 5px 0 0;
 	-moz-border-radius: 0 5px 0 0;
@@ -62,12 +62,13 @@ right connector from last child*/
 .tree ul ul::before{
 	content: '';
 	position: absolute; top: 0; left: 50%;
-	border-left: 1px solid #ccc;
+	border-left: 1px solid var(--bs-dark);
 	width: 0; height: 20px;
 }
 
 .tree li a{
-	border: 1px solid #ccc;
+    border: 1px solid var(--bs-dark);
+	background: white;
 	padding: 5px 10px;
 	text-decoration: none;
 	color: #666;
@@ -88,6 +89,7 @@ right connector from last child*/
 .tree ul.current > li > a,
 .tree a.current {
     background: hsl(249, 77%, 88%);
+    color: #000;
 }
 
 /*Time for some hover effects*/
@@ -95,7 +97,6 @@ right connector from last child*/
 .tree li a:hover, .tree li a:hover+ul li a {
 	background: hsl(249, 77%, 88%);
     color: #000;
-    border: 1px solid hsl(249, 18%, 64%);
 }
 /*Connector styles on hover*/
 .tree li a:hover+ul li::after, 

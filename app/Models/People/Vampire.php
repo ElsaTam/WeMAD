@@ -17,13 +17,13 @@ class Vampire extends HiddenHuman
      * Get the sire of the vampire
     */
     public function sire() {
-        return $this->belongsTo(App\Models\People\Vampire::class, 'sire_id');
+        return $this->belongsTo(Vampire::class, 'sire_id');
     }
 
     /**
      * Get the brood of the vampire
     */
     public function brood() {
-        return $this->hasMany(App\Models\People\Vampire::class, 'sire_id', 'person_id');
+        return $this->hasMany(Vampire::class, 'sire_id', 'id');
     }
 }

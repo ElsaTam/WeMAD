@@ -3,6 +3,7 @@
 namespace App\Faker;
 
 use App\Faker\Helper;
+use App\Faker\PlaceFaker;
 use App\Faker\Data\PlacesData;
 use App\Custom\Date;
 use Illuminate\Support\Facades\DB;
@@ -23,11 +24,12 @@ class PersonFaker
     public function person(?string $type)
     {
         include 'Data\BirthPlaces.php';
+        $place_faker = new PlaceFaker();
 
         if (!$type) $type = $this->type();
 
         // Pick the office
-        $office_id = $this->office();
+        $office_id = $place_faker->office();
         // Pick the sex
         $sex = $this->sex();
         // Pick the birth date
@@ -35,11 +37,11 @@ class PersonFaker
         $age = $birth_date ? Date::parse($birth_date)->age() : -1;
         // Pick a random country
         $usa_proba = $this->helper->usa_proba($age);
-        $key_country = $this->country($usa_proba);
+        $key_country = $place_faker->country($usa_proba);
         // Ethnic group (White, Black, Hispanic, etc.)
         $ethnic_group = $countries[$key_country]["ethnic_group"];
         // Pick the birth place
-        $birth_place = $this->birth_place($key_country, 100);
+        $birth_place = $place_faker->birth_place($key_country, 100);
         // Pick the name
         $names = $this->names($sex, $key_country);
         // Pick the height and weight
@@ -271,24 +273,6 @@ class PersonFaker
         return $bmi * ($height / 100) * ($height / 100);
     }
 
-    /**
-     * Pick an origin country based on the population of immigrants
-     * @param  int  $usa_proba  The probability to have someone from the usa. If -1, usa will be weighted as the others (with its population)
-     * @return string Returns the key of the country
-     */
-    public function country(int $usa_proba = -1)
-    {
-        if (rand(1, 100) < $usa_proba) return "usa";
-
-        include 'Data/BirthPlaces.php';
-        $weighted_countries = array();
-        foreach ($countries as $key => $value) {
-            if ($key == "usa" && $usa_proba > 0) continue;
-            $weighted_countries[$key] = $value["population"];
-        }
-        return $this->helper->weighted_random($weighted_countries);
-    }
-
     public function birth_date(string $type)
     {
         $age = 0;
@@ -336,35 +320,6 @@ class PersonFaker
         }
         $date = new Date($year, $month, $day);
         return $date->to_string();
-    }
-
-    /**
-     * Pick a birth place, depending on the origin country.
-     * The person can be of a foreign origin from its ancesters, but born in the united states.
-     * @param string $key_country The key of the origin country
-     * @param int $immigrant_proba The probability to be born outside the usa (in the origin country)
-     * @return string Returns the place of birth
-     */
-    public function birth_place(string $key_country, int $immigrant_proba)
-    {
-        include 'Data/BirthPlaces.php';
-
-        // Direct immigrant, born in another country
-        if ($key_country != "usa" && rand(1, 100) < $immigrant_proba) {
-            return $this->helper->weighted_random(${$key_country."_cities"}).", ".$countries[$key_country]["country"];
-        }
-
-        // Either a child of former immigrants, or an american
-        return $this->helper->weighted_random($usa_cities).", Etats-Unis";
-    }
-
-    public function office()
-    {
-        $offices = PlacesData::offices();
-        foreach ($offices as $id => $value) {
-            $offices_id[$id] = $value['proba'];
-        }
-        return $this->helper->weighted_random($offices_id);
     }
 
     public function hair(string $key_country, int $age, bool $can_be_bald)
@@ -523,7 +478,7 @@ class PersonFaker
     {
         include 'Data/BirthPlaces.php';
 
-        $all_languages = array(
+        $all_languages = [
             // "Anglais" => 1348,
             "Mandarin (Chine)" => 1120,
             "Hindi (Inde)" => 600,
@@ -551,9 +506,9 @@ class PersonFaker
             "Yoruba" => 43, // Niger
             "Birman" => 43,
             "Polonais" => 41
-        );
+        ];
 
-        $indian_languages = array(
+        $indian_languages = [
             // "Hindi (Inde)" => 600,
             "Urdu (Inde)" => 230,
             "Marathi (Inde)" => 99,
@@ -564,16 +519,16 @@ class PersonFaker
             "Kannada (Inde)" => 59,
             "Pendjabi de l'Est (Inde)" => 52,
             "Odia (Inde)" => 40
-        );
+        ];
 
-        $chinese_languages = array(
+        $chinese_languages = [
             // "Mandarin (Chine)" => 1120,
             "Cantonais (Chine)" => 85,
             "Wu (Chine)" => 82,
             "Minnan (Chine)" => 49,
             "Jin (Chine)" => 47,
             "Hakka (Chine)" => 44,
-        );
+        ];
 
         if (mb_strlen($countries[$key_country]["language"]) > 0)
             $languages = explode(', ', $countries[$key_country]["language"]);

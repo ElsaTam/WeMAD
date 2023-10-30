@@ -12,7 +12,7 @@ use App\Custom\StringHelpers;
 <h4 class="text-center">Fiche personnelle de l'agent</h4>
 
 <div class="d-flex gap-3 mb-3">
-    <img src="{{ URL::asset($agent->featuredPhoto ? $agent->featuredPhoto->src : '/storage/pictures/profile-unknown.png') }}" style="width: 250px; object-fit: cover;">
+    <img src="{{ URL::asset($agent->featuredPhoto) }}" style="width: 250px; object-fit: cover;">
     <div class="d-flex flex-column gap-2">
         <h5 class="my-3">
             {{ $agent->sex == "Homme" ? "Mr." : "Mme." }} <span class="text-uppercase">{{ $agent->last_name }}</span> {{ $agent->first_name }}

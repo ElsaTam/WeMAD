@@ -101,6 +101,12 @@ class PersonSeeder extends Seeder
         // ------
 
         DB::table('people')->insert($wanteds);
+
+        // ------
+        // PRISONERS
+        // ------
+
+        DB::table('people')->insert($prisoners);
     }
 
     private function seed_generated()

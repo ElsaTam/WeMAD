@@ -14,6 +14,6 @@ class Demon extends Person
 
     public function warlocks()
     {
-        return $this->hasMany(App\Models\People\Warlock::class, 'demon_id', 'id');
+        return $this->hasMany(Warlock::class, 'demon_id', 'id');
     }
 }

@@ -1,4 +1,4 @@
 <div class="d-inline-block hBack position-relative">
-    <img src="{{ URL::asset('/storage/pictures/icons/arrow-left-solid.svg') }}" height="20">
+    <i class="fa-solid fa-arrow-left me-2"></i>
     <a class="align-middle stretched-link" href="{{ url($url) }}">Retour</a>
 </div>

@@ -17,6 +17,6 @@ class State extends Model
     ];
     
     public function offices() {
-        return $this->hasMany(App\Models\Places\Office::class, 'state_id', 'id');
+        return $this->hasMany(Office::class, 'state_id', 'id');
     }
 }

@@ -11,14 +11,8 @@ use App\Custom\Date;
     </tr>
     @endif
     <tr>
-        <td class="border"><span class="fw-bold">
-            Date de naissance : </span>
-            @if(! is_null($person->birth_date))
-            {{ Date::parse($person->birth_date)->to_string() }}
-            ({{ (Date::parse($person->birth_date)->age())." ans" }})
-            @else
-            N/A
-            @endif
+        <td class="border">
+            <span class="fw-bold">Date de naissance : </span>{{ $person->birth_date }} ({{ $person->age }} ans)
         </td>
         <td class="border"><span class="fw-bold">Lieu de naissance : </span>{{ $person->birth_place ?: 'N/A'}}</td>
     </tr>
@@ -39,9 +33,8 @@ use App\Custom\Date;
             <span class="fw-bold">Espèce : </span>{{ $person->type ?: 'N/A'}}
             @if( isset($person->sire) )
                 ({{ $person->sire->sex == "Homme" ? "Sire" : "Dame" }} :
-                <a href="{{ url(strtolower($person->type).'/'.$person->sire_id) }}">
-                    {{ $person->sire->first_name }} {{ $person->sire->last_name }})
-                </a>
+                <a href="{{ url($person->sire->link) }}">{{ $person->sire->first_last_name }}</a>
+                )
             @endif
         </td>
         <td class="border"><span class="fw-bold">Langues : </span>{{ $person->languages ?: 'N/A'}}</td>

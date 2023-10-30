@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\People\Person;
 
 class Photo extends Model
 {
@@ -14,6 +15,6 @@ class Photo extends Model
      * Get the person that owns the photo.
     */
     public function person() {
-        return $this->belongsTo(App\Models\People\Person::class, 'person_id');
+        return $this->belongsTo(Person::class, 'person_id');
     }
 }

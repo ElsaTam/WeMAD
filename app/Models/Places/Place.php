@@ -6,7 +6,6 @@ use Nanigans\SingleTableInheritance\SingleTableInheritanceTrait;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Models\People\Human;
-use App\Models\Places\State;
 
 class Place extends Model
 {
@@ -44,13 +43,39 @@ class Place extends Model
     //           MUTATORS
     // -----------------------------
 
+    protected $disableMutator = False;
+
     public function getFullNameAttribute()
     {
         return $this->name.', '.$this->state->name.' ('.$this->state_id.')';
     }
 
+    public function getLinkAttribute()
+    {
+        $this->disableMutator = True;
+        $link = $this->type.'s/'.$this->id;
+        $this->disableMutator = False;
+        return $link;
+    }
+
+    public function getIsOfficeAttribute()
+    {
+        $this->disableMutator = True;
+        $is_office = $this->type == "office";
+        $this->disableMutator = False;
+        return $is_office;
+    }
+
+    public function getIsPrisonAttribute()
+    {
+        $this->disableMutator = True;
+        $is_office = $this->type == "prison";
+        $this->disableMutator = False;
+        return $is_office;
+    }
+
     public function getTypeAttribute($value)
     {
-        return trans('database.'.$value);
+        return $this->disableMutator ? $value : trans('database.'.$value);
     }
 }

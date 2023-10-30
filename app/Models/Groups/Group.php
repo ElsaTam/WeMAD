@@ -3,6 +3,11 @@
 namespace App\Models\Groups;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\People\HiddenHuman;
+use App\Models\People\Vampire;
+use App\Models\People\Warlock;
+use App\Models\People\Werewolf;
+use App\Models\Places\Office;
 
 class Group extends Model
 {
@@ -18,9 +23,14 @@ class Group extends Model
         'office_id'
     ];
 
+
+    // -----------------------------
+    //         RELATIONSHIPS
+    // -----------------------------
+
     public function type()
     {
-        return $this->belongsTo(App\Models\Groups\GroupType::class, 'group_type_id');
+        return $this->belongsTo(GroupType::class, 'group_type_id');
     }
 
     /**
@@ -28,7 +38,7 @@ class Group extends Model
      */
     public function leader()
     {
-        return $this->hasOne(App\Models\People\HiddenHuman::class, 'id', 'leader_id');
+        return $this->hasOne(HiddenHuman::class, 'id', 'leader_id');
     }
 
     /**
@@ -36,18 +46,38 @@ class Group extends Model
     */
     public function office()
     {
-        return $this->belongsTo(App\Models\Places\Office::class, 'office_id');
+        return $this->belongsTo(Office::class, 'office_id');
     }
 
     public function members()
     {
         switch ($this->type->id) {
-            case "circle":
-                return $this->hasMany(App\Models\People\Warlock::class, 'group_id', 'id');
             case "clan":
-                return $this->hasMany(App\Models\People\Vampire::class, 'group_id', 'id');
+                return $this->hasMany(Vampire::class, 'group_id', 'id');
+            case "circle":
+                return $this->hasMany(Warlock::class, 'group_id', 'id');
             case "pack":
-                return $this->hasMany(App\Models\People\Werewolf::class, 'group_id', 'id');
+                return $this->hasMany(Werewolf::class, 'group_id', 'id');
         }
+    }
+
+
+    // -----------------------------
+    //           MUTATORS
+    // -----------------------------
+
+    protected $disableMutator = False;
+
+    public function getLinkAttribute()
+    {
+        $this->disableMutator = True;
+        $link = $this->type->id.'s/'.$this->id;
+        $this->disableMutator = False;
+        return $link;
+    }
+
+    public function getFullNameAttribute()
+    {
+        return $this->type->name." ".$this->name;
     }
 }

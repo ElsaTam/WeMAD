@@ -1,7 +1,7 @@
 <?php
 
 return [
-    "unknown" => "Inconnu",
+    "unknown" => "Inconnue",
     
     "human" => "Humain",
     "werewolf" => "Loup-Garou",
@@ -10,6 +10,10 @@ return [
     "faery" => "Fée",
     "demon" => "Démon",
     "stray" => "Errant",
+
+    "clan" => "Clan",
+    "circle" => "Cercle",
+    "pack" => "Pack",
 
     'male' => "Homme",
     'female' => "Femme",
@@ -31,5 +35,14 @@ return [
     'east' => "Est",
 
     'office' => "Agence",
-    'prison' => "Prison"
+    'prison' => "Prison",
+
+    'discharged' => "Annulé",
+    'convicted' => "Condamné",
+    'diversion' => "Jugement déféré",
+    'acquitted' => "Acquitté",
+    'no_charges_filed' => "Aucune accusation",
+    'vacated' => "Supprimé",
+    'pending' => "Procédure en cours",
+    'suspended' => "Condamnation avec sursis"
 ];

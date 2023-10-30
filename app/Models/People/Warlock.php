@@ -14,6 +14,6 @@ class Warlock extends HiddenHuman
 
     public function demon()
     {
-        return $this->belongsTo(App\Models\People\Demon::class, 'demon_id');
+        return $this->belongsTo(Demon::class, 'demon_id');
     }
 }

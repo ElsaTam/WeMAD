@@ -12,8 +12,7 @@ use App\Models\People\Vampire;
 class PersonController extends Controller
 {
     public function getMostWantedFugitives() {
-        $wanteds = Human::with('featuredPhoto')
-                    ->where('status', 'wanted')
+        $wanteds = Person::where('status', 'wanted')
                     ->join('criminal_records', 'people.id', '=', 'criminal_records.person_id')
                     ->where('criminal_records.most_wanted', True)
                     ->get();
@@ -44,13 +43,15 @@ class PersonController extends Controller
     }
 
     public function getPerson($id) {
-        $person = Human::find($id);
+        $person = Person::find($id);
 
         switch ($person->status) {
             case 'wanted':
                 return view('people/wanted-profile')->with('wanted', $person);
             case 'missing':
                 return view('people/missing-profile')->with('missing', $person);
+            case 'prisoner':
+                return view('people/prisoner-profile')->with('prisoner', $person);
             case 'agent':
                 return view('people/agent-profile')->with('agent', $person);
             case 'civilian':

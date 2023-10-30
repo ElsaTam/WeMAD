@@ -3,6 +3,7 @@
 namespace App\Models\People;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Custom\Date;
 use App\Models\Places\Place;
 use App\Models\Message;
 
@@ -51,6 +52,18 @@ class Human extends Person
 
     public function getIsMissingAttribute() {
         return $this->status == "missing" && ! $this->dead;
+    }
+
+    public function getAgeAttribute() {
+        $this->disableMutator = True;
+        $age = $this->birth_date ? Date::parse($this->birth_date)->age() : "N/A";
+        $this->disableMutator = False;
+        return $age;
+    }
+
+    public function getBirthDateAttribute($value)
+    {
+        return $this->disableMutator ? $value : ($value ? Date::parse($value)->to_string() : "N/A");
     }
 
     public function getEthnicGroupAttribute($value)

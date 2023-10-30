@@ -17,7 +17,6 @@ class CreateCriminalRecordsTable extends Migration
             $table->string('person_id')->primary();
             $table->foreign('person_id')->references('id')->on('people')->onDelete('cascade');
             
-            $table->string('crimes');
             $table->boolean('most_wanted')->default(False);
             $table->integer('reward')->nullable();
             $table->text('remarks')->nullable();

@@ -26,7 +26,7 @@ Route::get('wanteds/missings', 'PersonController@getMissings');
 
 Route::get('agents/{id}', 'PersonController@getPerson');
 Route::get('wanteds/fugitives/{id}', 'PersonController@getPerson');
-Route::get('wanteds/missing/{id}', 'PersonController@getPerson');
+Route::get('wanteds/missings/{id}', 'PersonController@getPerson');
 Route::get('prisoners/{id}', 'PersonController@getPerson');
 Route::get('civilians/{id}', 'PersonController@getPerson');
 
@@ -39,9 +39,9 @@ Route::get('offices/east-council', 'OfficeController@getEastCouncil');
 Route::get('offices/no-council', 'OfficeController@getNoCouncil');
 Route::get('offices/{id}', 'OfficeController@getOffice');
 
-Route::get('pack/{id}', 'GroupController@getGroup');
-Route::get('clan/{id}', 'GroupController@getGroup');
-Route::get('circle/{id}', 'GroupController@getGroup');
+Route::get('packs/{id}', 'GroupController@getGroup');
+Route::get('clans/{id}', 'GroupController@getGroup');
+Route::get('circles/{id}', 'GroupController@getGroup');
 
 Route::get('ressources/', function() { return view('ressources/ressources'); });
 Route::get('ressources/{page}', function($page) { return view('ressources/'.$page.'/'.$page); });

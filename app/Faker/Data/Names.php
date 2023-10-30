@@ -545,7 +545,7 @@ $ireland_lastname = [
 ];
 
 
-$country_for_names = array(
+$country_for_names = [
     "usa" => "usa",
     "mexico" => "mexico",
     "india" => "india",
@@ -600,7 +600,7 @@ $country_for_names = array(
     "spain" => "spain",
     "australia" => "usa",
     "ireland" => "ireland"
-);
+];
 
 // ============================
 

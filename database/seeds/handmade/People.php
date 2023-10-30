@@ -1,7 +1,8 @@
 <?php
 
-$office_bosses = array(
-    array(
+$office_bosses = [
+	// Aaron Brand
+    [
 		'id' => 'aaronbrand',
 		'type' => 'human',
 		'first_name' => 'Aaron',
@@ -23,11 +24,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Alexis Jensen
+    [
 		'id' => 'alexisjensen',
 		'type' => 'human',
 		'first_name' => 'Alexis',
@@ -49,11 +49,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Andre Duvall
+    [
 		'id' => 'andreduvall',
 		'type' => 'human',
 		'first_name' => 'Andre',
@@ -75,11 +74,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Arthur Matteson
+    [
 		'id' => 'arthurmatteson',
 		'type' => 'human',
 		'first_name' => 'Arthur',
@@ -101,11 +99,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Aubrey Faust
+    [
 		'id' => 'aubreyfaust',
 		'type' => 'human',
 		'first_name' => 'Aubrey',
@@ -127,11 +124,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Aurelio Conte
+    [
 		'id' => 'aurelioconte',
 		'type' => 'human',
 		'first_name' => 'Aurelio',
@@ -153,11 +149,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Bonnie Soria
+    [
 		'id' => 'bonniesoria',
 		'type' => 'human',
 		'first_name' => 'Bonnie',
@@ -179,11 +174,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Buddy Lambert
+    [
 		'id' => 'buddylambert',
 		'type' => 'human',
 		'first_name' => 'Buddy',
@@ -205,11 +199,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Cliff Fischer
+    [
 		'id' => 'clifffischer',
 		'type' => 'human',
 		'first_name' => 'Cliff',
@@ -231,11 +224,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Corrina Lawsom
+    [
 		'id' => 'corrinalawsom',
 		'type' => 'human',
 		'first_name' => 'Corrina',
@@ -257,11 +249,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Daniela Mcadams
+    [
 		'id' => 'danielamcadams',
 		'type' => 'human',
 		'first_name' => 'Daniela',
@@ -283,11 +274,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Devon Devlin
+    [
 		'id' => 'devondevlin',
 		'type' => 'human',
 		'first_name' => 'Devon',
@@ -309,11 +299,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Dominic Browing
+    [
 		'id' => 'dominicbrowing',
 		'type' => 'human',
 		'first_name' => 'Dominic',
@@ -335,11 +324,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Donnell Kelley
+    [
 		'id' => 'donnellkelley',
 		'type' => 'human',
 		'first_name' => 'Donnell',
@@ -361,11 +349,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Earl Austin
+    [
 		'id' => 'earlaustin',
 		'type' => 'human',
 		'first_name' => 'Earl',
@@ -387,11 +374,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Elliott Sides
+    [
 		'id' => 'elliottsides',
 		'type' => 'human',
 		'first_name' => 'Elliott',
@@ -413,11 +399,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Emile Ferry
+    [
 		'id' => 'emileferry',
 		'type' => 'human',
 		'first_name' => 'Emile',
@@ -439,11 +424,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Eriberto Caballeros
+    [
 		'id' => 'eribertocaballeros',
 		'type' => 'human',
 		'first_name' => 'Eriberto',
@@ -465,11 +449,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Ernie Colon
+    [
 		'id' => 'erniecolon',
 		'type' => 'human',
 		'first_name' => 'Ernie',
@@ -491,11 +474,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Eroll Jewell
+    [
 		'id' => 'erolljewell',
 		'type' => 'human',
 		'first_name' => 'Eroll',
@@ -517,37 +499,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
-		'id' => 'estellastout',
-		'type' => 'vampire',
-		'first_name' => 'Estella',
-		'last_name' => 'Stout',
-		'aliases' => NULL,
-		'sex' => 'female',
-		'height' => NULL,
-		'weight' => NULL,
-		'dead' => '0',
-		'birth_date' => '13/11/1941',
-		'birth_place' => NULL,
-		'hair' => NULL,
-		'eyes' => NULL,
-		'ethnic_group' => 'unknown',
-		'status' => 'civilian',
-		'languages' => 'Anglais',
-		'place_id' => 'office_lasvegas_nv',
-		'group_id' => 'clan_lasvegas',
-		'sire_id' => NULL,
-		'self_control' => '0',
-		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
-
-    array(
+	// Evelyn Morrison
+    [
 		'id' => 'evelynmorrison',
 		'type' => 'human',
 		'first_name' => 'Evelyn',
@@ -569,11 +524,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Fabrice Ohara
+    [
 		'id' => 'fabriceohara',
 		'type' => 'human',
 		'first_name' => 'Fabrice',
@@ -595,11 +549,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Gerardo Ortega
+    [
 		'id' => 'gerardoortega',
 		'type' => 'human',
 		'first_name' => 'Gerardo',
@@ -621,11 +574,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Glen Carver
+    [
 		'id' => 'glencarver',
 		'type' => 'human',
 		'first_name' => 'Glen',
@@ -647,11 +599,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Guy Love
+    [
 		'id' => 'guylove',
 		'type' => 'human',
 		'first_name' => 'Guy',
@@ -673,11 +624,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Harry Liwai
+    [
 		'id' => 'harryliwai',
 		'type' => 'human',
 		'first_name' => 'Harry',
@@ -699,11 +649,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Herbert Leroy
+    [
 		'id' => 'herbertleroy',
 		'type' => 'human',
 		'first_name' => 'Herbert',
@@ -725,11 +674,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Jace Caldera
+    [
 		'id' => 'jacecaldera',
 		'type' => 'human',
 		'first_name' => 'Jace',
@@ -751,11 +699,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Jake Sharp
+    [
 		'id' => 'jakesharp',
 		'type' => 'human',
 		'first_name' => 'Jake',
@@ -777,11 +724,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Janie Wheeler
+    [
 		'id' => 'janiewheeler',
 		'type' => 'human',
 		'first_name' => 'Janie',
@@ -803,11 +749,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Jeffrey Crisostomo
+    [
 		'id' => 'jeffreycrisostomo',
 		'type' => 'human',
 		'first_name' => 'Jeffrey',
@@ -829,11 +774,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Jeremy Finch
+    [
 		'id' => 'jeremyfinch',
 		'type' => 'human',
 		'first_name' => 'Jeremy',
@@ -855,11 +799,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Jim Kirby
+    [
 		'id' => 'jimkirby',
 		'type' => 'human',
 		'first_name' => 'Jim',
@@ -881,11 +824,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Joseph Kyle
+    [
 		'id' => 'josephkyle',
 		'type' => 'human',
 		'first_name' => 'Joseph',
@@ -907,11 +849,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Kobe Rush
+    [
 		'id' => 'koberush',
 		'type' => 'human',
 		'first_name' => 'Kobe',
@@ -933,11 +874,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Lance Leroy
+    [
 		'id' => 'lanceleroy',
 		'type' => 'human',
 		'first_name' => 'Lance',
@@ -959,11 +899,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Leland Feldman
+    [
 		'id' => 'lelandfeldman',
 		'type' => 'human',
 		'first_name' => 'Leland',
@@ -985,11 +924,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Leon Smith
+    [
 		'id' => 'leonsmith',
 		'type' => 'human',
 		'first_name' => 'Leon',
@@ -1011,11 +949,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Lucy Livingston
+    [
 		'id' => 'lucylivingston',
 		'type' => 'human',
 		'first_name' => 'Lucy',
@@ -1037,11 +974,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Luke Mast
+    [
 		'id' => 'lukemast',
 		'type' => 'human',
 		'first_name' => 'Luke',
@@ -1063,11 +999,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Mansir Nwosu
+    [
 		'id' => 'mansirnwosu',
 		'type' => 'human',
 		'first_name' => 'Mansir',
@@ -1089,11 +1024,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Marshall Richardson
+    [
 		'id' => 'marshallrichardson',
 		'type' => 'human',
 		'first_name' => 'Marshall',
@@ -1115,11 +1049,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Maurine Riley
+    [
 		'id' => 'maurinerainey',
 		'type' => 'human',
 		'first_name' => 'Maurine',
@@ -1141,11 +1074,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Michel Archibald
+    [
 		'id' => 'michaelarchibald',
 		'type' => 'human',
 		'first_name' => 'Michael',
@@ -1167,11 +1099,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Ngok Delong
+    [
 		'id' => 'ngokdelong',
 		'type' => 'human',
 		'first_name' => 'Ngok',
@@ -1193,11 +1124,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Philip Patten
+    [
 		'id' => 'philippatten',
 		'type' => 'human',
 		'first_name' => 'Philip',
@@ -1219,11 +1149,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Rich Worthy
+    [
 		'id' => 'richworthy',
 		'type' => 'human',
 		'first_name' => 'Rich',
@@ -1245,11 +1174,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Rickey Cornell
+    [
 		'id' => 'rickeycornell',
 		'type' => 'human',
 		'first_name' => 'Rickey',
@@ -1271,11 +1199,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Rupert Nolan
+    [
 		'id' => 'rupertnolan',
 		'type' => 'human',
 		'first_name' => 'Rupert',
@@ -1297,11 +1224,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Ryan Zamora
+    [
 		'id' => 'ryanzamora',
 		'type' => 'human',
 		'first_name' => 'Ryan',
@@ -1323,11 +1249,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Sheldon Riggs
+    [
 		'id' => 'sheldonriggs',
 		'type' => 'human',
 		'first_name' => 'Sheldon',
@@ -1349,11 +1274,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Tomas Powell
+    [
 		'id' => 'tomaspowell',
 		'type' => 'human',
 		'first_name' => 'Tomas',
@@ -1375,11 +1299,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Trevor Starr
+    [
 		'id' => 'trevorstarr',
 		'type' => 'human',
 		'first_name' => 'Trevor',
@@ -1401,11 +1324,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Tukkuttok Apaata
+    [
 		'id' => 'tukkuttokapaata',
 		'type' => 'human',
 		'first_name' => 'Tukkuttok',
@@ -1427,11 +1349,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Tylor Walters
+    [
 		'id' => 'tylorwalters',
 		'type' => 'human',
 		'first_name' => 'Tylor',
@@ -1453,11 +1374,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Wana'ao Pekelo
+    [
 		'id' => 'wanaaopekelo',
 		'type' => 'human',
 		'first_name' => 'Wana\'ao',
@@ -1479,11 +1399,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Willard Elsmore
+    [
 		'id' => 'willardelsmore',
 		'type' => 'human',
 		'first_name' => 'Willard',
@@ -1505,11 +1424,10 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Willis Weldon
+    [
 		'id' => 'willisweldon',
 		'type' => 'human',
 		'first_name' => 'Willis',
@@ -1531,14 +1449,13 @@ $office_bosses = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-);
+];
 
-$hunters = array(
-    array(
+$hunters = [
+	// Alec Cohen Sarajevic
+    [
 		'id' => 'aleccohensarajevic',
 		'type' => 'human',
 		'first_name' => 'Alec',
@@ -1560,11 +1477,485 @@ $hunters = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
+	
+	// Nathaniel Lancaster
+    [
+		'id' => 'nathaniellancaster',
+		'type' => 'human',
+		'first_name' => 'Nathaniel',
+		'last_name' => 'Lancaster',
+		'aliases' => NULL,
+		'sex' => 'male',
+		'height' => 180,
+		'weight' => 80,
+		'dead' => '0',
+		'birth_date' => '16/08/1986',
+		'birth_place' => 'Liverpool, Angleterre',
+		'hair' => "Blonds",
+		'eyes' => "Marrons",
+		'ethnic_group' => 'white',
+		'status' => 'agent',
+		'languages' => 'Anglais',
+		'place_id' => 'office_lasvegas_nv',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL,
+	],
+	
+	// Doyle Carter
+    [
+		'id' => 'doylecarter',
+		'type' => 'human',
+		'first_name' => 'Doyle',
+		'last_name' => 'Carter',
+		'aliases' => NULL,
+		'sex' => 'male',
+		'height' => 175,
+		'weight' => 67,
+		'dead' => '0',
+		'birth_date' => '31/10/1971',
+		'birth_place' => 'Dallas, Texas, Etats-Unis',
+		'hair' => "Bruns",
+		'eyes' => "Gris",
+		'ethnic_group' => 'white',
+		'status' => 'agent',
+		'languages' => 'Anglais',
+		'place_id' => 'office_lasvegas_nv',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL,
+	],
+	
+	// Gael Jestin
+    [
+		'id' => 'gaeljestin',
+		'type' => 'human',
+		'first_name' => 'Gael',
+		'last_name' => 'Jestin',
+		'aliases' => NULL,
+		'sex' => 'male',
+		'height' => 175,
+		'weight' => 66,
+		'dead' => '0',
+		'birth_date' => '10/10/1994',
+		'birth_place' => 'France',
+		'hair' => "Noirs",
+		'eyes' => "Bleus",
+		'ethnic_group' => 'white',
+		'status' => 'agent',
+		'languages' => 'Anglais, Français, Breton',
+		'place_id' => 'office_lasvegas_nv',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL,
+	],
+	
+	// Sabriel Nix
+    [
+		'id' => 'sabrielnix',
+		'type' => 'human',
+		'first_name' => 'Sabriel',
+		'last_name' => 'Nix',
+		'aliases' => NULL,
+		'sex' => 'male',
+		'height' => 191,
+		'weight' => 85,
+		'dead' => '0',
+		'birth_date' => '06/06/1996',
+		'birth_place' => 'Rio Rancho, Nouveau-Mexique, Etats-Unis',
+		'hair' => "Noirs",
+		'eyes' => "Marrons",
+		'ethnic_group' => 'white',
+		'status' => 'agent',
+		'languages' => 'Anglais',
+		'place_id' => 'office_lasvegas_nv',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL,
+	],
+	
+	// Stephane Laroche
+    [
+		'id' => 'stephanelaroche',
+		'type' => 'human',
+		'first_name' => 'Stephane',
+		'last_name' => 'Laroche',
+		'aliases' => NULL,
+		'sex' => 'male',
+		'height' => NULL,
+		'weight' => NULL,
+		'dead' => '0',
+		'birth_date' => NULL,
+		'birth_place' => 'France',
+		'hair' => "Chauve",
+		'eyes' => NULL,
+		'ethnic_group' => 'white',
+		'status' => 'agent',
+		'languages' => 'Anglais, Français',
+		'place_id' => 'office_lasvegas_nv',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL,
+	],
+	
+	// Gabriel Knight Ritter Belmont
+    [
+		'id' => 'gabrielknight',
+		'type' => 'human',
+		'first_name' => 'Gabriel',
+		'last_name' => 'Knight Ritter Belmont',
+		'aliases' => NULL,
+		'sex' => 'male',
+		'height' => NULL,
+		'weight' => NULL,
+		'dead' => '0',
+		'birth_date' => NULL,
+		'birth_place' => 'Allemagne',
+		'hair' => "Chauve",
+		'eyes' => NULL,
+		'ethnic_group' => 'white',
+		'status' => 'agent',
+		'languages' => 'Anglais, Allemand',
+		'place_id' => 'office_lasvegas_nv',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL,
+	],
+	
+	// Cornelia Merrywick
+    [
+		'id' => 'corneliamerrywick',
+		'type' => 'human',
+		'first_name' => 'Cornelia',
+		'last_name' => 'Merrywick',
+		'aliases' => NULL,
+		'sex' => 'female',
+		'height' => 172,
+		'weight' => NULL,
+		'dead' => '0',
+		'birth_date' => '05/03/1991',
+		'birth_place' => 'Rock Springs, Wyoming, Etats-Unis',
+		'hair' => "Blonds",
+		'eyes' => "Bleus",
+		'ethnic_group' => 'white',
+		'status' => 'agent',
+		'languages' => 'Anglais',
+		'place_id' => 'office_lasvegas_nv',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL,
+	],
+	
+	// Sebastian Montgomery
+    [
+		'id' => 'sebastianmontgomery',
+		'type' => 'human',
+		'first_name' => 'Sebastian',
+		'last_name' => 'Montgomery',
+		'aliases' => NULL,
+		'sex' => 'male',
+		'height' => NULL,
+		'weight' => NULL,
+		'dead' => '0',
+		'birth_date' => NULL,
+		'birth_place' => 'Etats-Unis',
+		'hair' => "Bruns",
+		'eyes' => NULL,
+		'ethnic_group' => 'white',
+		'status' => 'agent',
+		'languages' => 'Anglais',
+		'place_id' => 'office_lasvegas_nv',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL,
+	],
+	
+	// Steeven Nelson
+    [
+		'id' => 'steevennelson',
+		'type' => 'human',
+		'first_name' => 'Steeven',
+		'last_name' => 'Nelson',
+		'aliases' => NULL,
+		'sex' => 'male',
+		'height' => 172,
+		'weight' => 60,
+		'dead' => '0',
+		'birth_date' => '01/01/1991',
+		'birth_place' => 'Etats-Unis',
+		'hair' => "Bruns",
+		'eyes' => "Noisettes",
+		'ethnic_group' => 'white',
+		'status' => 'agent',
+		'languages' => 'Anglais',
+		'place_id' => 'office_lasvegas_nv',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL,
+	],
+	
+	// Luis Serrano
+    [
+		'id' => 'luisserrano',
+		'type' => 'human',
+		'first_name' => 'Luis',
+		'last_name' => 'Serrano',
+		'aliases' => NULL,
+		'sex' => 'male',
+		'height' => NULL,
+		'weight' => NULL,
+		'dead' => '0',
+		'birth_date' => '01/01/85',
+		'birth_place' => 'Etats-Unis',
+		'hair' => "Bruns",
+		'eyes' => "Marrons",
+		'ethnic_group' => 'hispanic',
+		'status' => 'agent',
+		'languages' => 'Anglais, Espagnol',
+		'place_id' => 'office_lasvegas_nv',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL,
+	],
+	
+	// Travis Johnson
+    [
+		'id' => 'travisjohnson',
+		'type' => 'human',
+		'first_name' => 'Travis',
+		'last_name' => 'Johnson',
+		'aliases' => NULL,
+		'sex' => 'male',
+		'height' => NULL,
+		'weight' => NULL,
+		'dead' => '0',
+		'birth_date' => NULL,
+		'birth_place' => 'Arizona, Etats-Unis',
+		'hair' => "Chatains",
+		'eyes' => "Marrons",
+		'ethnic_group' => 'white',
+		'status' => 'agent',
+		'languages' => 'Anglais',
+		'place_id' => 'office_lasvegas_nv',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL,
+	],
+	
+	// Miles Sutherland
+    [
+		'id' => 'milessutherland',
+		'type' => 'human',
+		'first_name' => 'Miles',
+		'last_name' => 'Sutherland',
+		'aliases' => NULL,
+		'sex' => 'male',
+		'height' => 188,
+		'weight' => 86,
+		'dead' => '0',
+		'birth_date' => NULL,
+		'birth_place' => 'Mokena, Illinois, Etats-Unis',
+		'hair' => "Bruns",
+		'eyes' => "Marrons",
+		'ethnic_group' => 'white',
+		'status' => 'agent',
+		'languages' => 'Anglais',
+		'place_id' => 'office_lasvegas_nv',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL,
+	],
+	
+	// Sullivan Tessier
+    [
+		'id' => 'sullivantessier',
+		'type' => 'human',
+		'first_name' => 'Sullivan',
+		'last_name' => 'Tessier',
+		'aliases' => NULL,
+		'sex' => 'male',
+		'height' => 177,
+		'weight' => 83,
+		'dead' => '0',
+		'birth_date' => NULL,
+		'birth_place' => 'Houma, Louisiane, Etats-Unis',
+		'hair' => "Bruns",
+		'eyes' => "Marrons",
+		'ethnic_group' => 'white',
+		'status' => 'agent',
+		'languages' => 'Anglais, Français',
+		'place_id' => 'office_lasvegas_nv',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL,
+	],
+	
+	// Rhea Streisand
+    [
+		'id' => 'rheastreisand',
+		'type' => 'human',
+		'first_name' => 'Rhea',
+		'last_name' => 'Streisand',
+		'aliases' => NULL,
+		'sex' => 'female',
+		'height' => 181,
+		'weight' => 57,
+		'dead' => '0',
+		'birth_date' => NULL,
+		'birth_place' => 'Romeo, Michigan, Etats-Unis',
+		'hair' => "Blonds",
+		'eyes' => "Bleus",
+		'ethnic_group' => 'white',
+		'status' => 'agent',
+		'languages' => 'Anglais',
+		'place_id' => 'office_lasvegas_nv',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL,
+	],
 
-    array(
+	// Benito Quevedo
+    [
+		'id' => 'benitoquevedo',
+		'type' => 'human',
+		'first_name' => 'Benito',
+		'last_name' => 'Quevedo',
+		'aliases' => NULL,
+		'sex' => 'male',
+		'height' => 188,
+		'weight' => 80,
+		'dead' => '0',
+		'birth_date' => "13/08/1968",
+		'birth_place' => 'San Simon, Arizona, Etats-Unis',
+		'hair' => "Noirs",
+		'eyes' => "Verts",
+		'ethnic_group' => 'hispanic',
+		'status' => 'agent',
+		'languages' => 'Anglais, Espagnol',
+		'place_id' => 'office_lasvegas_nv',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL,
+	],
+
+	// Jerry Donovan
+    [
+		'id' => 'jerrydonovan',
+		'type' => 'human',
+		'first_name' => 'Jerry',
+		'last_name' => 'Donovan',
+		'aliases' => NULL,
+		'sex' => 'male',
+		'height' => 176,
+		'weight' => 74,
+		'dead' => '0',
+		'birth_date' => "27/05/1982",
+		'birth_place' => 'Gardnerville, Nevada, Etats-Unis',
+		'hair' => "Noirs",
+		'eyes' => "Marrons",
+		'ethnic_group' => 'hispanic',
+		'status' => 'agent',
+		'languages' => 'Anglais',
+		'place_id' => 'office_lasvegas_nv',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL,
+	],
+
+	// Julius Casillas
+    [
+		'id' => 'juliuscasillas',
+		'type' => 'human',
+		'first_name' => 'Julius',
+		'last_name' => 'Casillas',
+		'aliases' => NULL,
+		'sex' => 'male',
+		'height' => 187,
+		'weight' => 73,
+		'dead' => '0',
+		'birth_date' => "03/09/1994",
+		'birth_place' => 'Las Vegas, Nevada, Etats-Unis',
+		'hair' => "Noirs",
+		'eyes' => "Marrons",
+		'ethnic_group' => 'black',
+		'status' => 'agent',
+		'languages' => 'Anglais',
+		'place_id' => 'office_lasvegas_nv',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL,
+	],
+
+	// Gabrielle Beauvais
+    [
+		'id' => 'gabriellebeauvais',
+		'type' => 'human',
+		'first_name' => 'Gabrielle',
+		'last_name' => 'Beauvais',
+		'aliases' => NULL,
+		'sex' => 'female',
+		'height' => 165,
+		'weight' => 78,
+		'dead' => '0',
+		'birth_date' => "25/04/1967",
+		'birth_place' => 'Livingston, New Jersey, Etats-Unis',
+		'hair' => "Noirs",
+		'eyes' => "Noirs",
+		'ethnic_group' => 'black',
+		'status' => 'agent',
+		'languages' => 'Anglais, Français',
+		'place_id' => 'office_lasvegas_nv',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL,
+	],
+
+	// Gregory Terrell
+    [
+		'id' => 'gregoryterrell',
+		'type' => 'human',
+		'first_name' => 'Gregory',
+		'last_name' => 'Terrell',
+		'aliases' => NULL,
+		'sex' => 'male',
+		'height' => 183,
+		'weight' => 78,
+		'dead' => '0',
+		'birth_date' => "12/11/1989",
+		'birth_place' => 'Saint-Louis, Missouri, Etats-Unis',
+		'hair' => "Noirs",
+		'eyes' => "Marrons",
+		'ethnic_group' => 'black',
+		'status' => 'agent',
+		'languages' => 'Anglais, Français',
+		'place_id' => 'office_lasvegas_nv',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL,
+	],
+
+	// Vera F. Ramirez
+    [
 		'id' => 'veraframirez',
 		'type' => 'human',
 		'first_name' => 'Vera',
@@ -1586,14 +1977,13 @@ $hunters = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-);
+];
 
-$vampires = array(
-    array(
+$vampires = [
+	// Abby Cordwell
+    [
 		'id' => 'abbycordwell',
 		'type' => 'vampire',
 		'first_name' => 'Abbigail',
@@ -1615,11 +2005,10 @@ $vampires = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Birdie Tate
+    [
 		'id' => 'birdietate',
 		'type' => 'vampire',
 		'first_name' => 'Birdie',
@@ -1641,11 +2030,10 @@ $vampires = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Caleb Magnar (mort)
+    [
 		'id' => 'calebmagnar',
 		'type' => 'vampire',
 		'first_name' => 'Caleb',
@@ -1667,11 +2055,10 @@ $vampires = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Calvin Beck
+    [
 		'id' => 'calvinbeck',
 		'type' => 'vampire',
 		'first_name' => 'Calvin',
@@ -1693,15 +2080,14 @@ $vampires = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Celosia (morte)
+    [
 		'id' => 'celosia',
 		'type' => 'vampire',
-		'first_name' => '',
-		'last_name' => 'Celosia',
+		'first_name' => 'Celosia',
+		'last_name' => '',
 		'aliases' => NULL,
 		'sex' => 'female',
 		'height' => NULL,
@@ -1719,11 +2105,10 @@ $vampires = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Charles Gates
+    [
 		'id' => 'charlesgates',
 		'type' => 'vampire',
 		'first_name' => 'Charles',
@@ -1745,11 +2130,10 @@ $vampires = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Leonardo Pezziali
+    [
 		'id' => 'leonardopezziali',
 		'type' => 'vampire',
 		'first_name' => 'Leonardo',
@@ -1771,11 +2155,10 @@ $vampires = array(
 		'sire_id' => NULL,
 		'self_control' => '1',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Margaret Lowery
+    [
 		'id' => 'margaretlowery',
 		'type' => 'vampire',
 		'first_name' => 'Margaret',
@@ -1797,11 +2180,10 @@ $vampires = array(
 		'sire_id' => NULL,
 		'self_control' => '1',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Martin Clayton
+    [
 		'id' => 'martinclayton',
 		'type' => 'vampire',
 		'first_name' => 'Martin',
@@ -1823,11 +2205,10 @@ $vampires = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Maud Griffith
+    [
 		'id' => 'maudgriffith',
 		'type' => 'vampire',
 		'first_name' => 'Maud',
@@ -1849,11 +2230,10 @@ $vampires = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Vernon Langlay (mort)
+    [
 		'id' => 'vernonlangley',
 		'type' => 'vampire',
 		'first_name' => 'Vernon',
@@ -1875,11 +2255,10 @@ $vampires = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Wiliam Adan
+    [
 		'id' => 'williamadan',
 		'type' => 'vampire',
 		'first_name' => 'William',
@@ -1901,13 +2280,37 @@ $vampires = array(
 		'sire_id' => NULL,
 		'self_control' => '1',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
-);
+	],
 
-$warlocks = array(
-    array(
+	// Estella Stout
+    [
+		'id' => 'estellastout',
+		'type' => 'vampire',
+		'first_name' => 'Estella',
+		'last_name' => 'Stout',
+		'aliases' => NULL,
+		'sex' => 'female',
+		'height' => NULL,
+		'weight' => NULL,
+		'dead' => '0',
+		'birth_date' => '13/11/1941',
+		'birth_place' => NULL,
+		'hair' => NULL,
+		'eyes' => NULL,
+		'ethnic_group' => 'unknown',
+		'status' => 'civilian',
+		'languages' => 'Anglais',
+		'place_id' => 'office_lasvegas_nv',
+		'group_id' => 'clan_lasvegas',
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL,
+	],
+];
+
+$warlocks = [
+	// Aden McGuire
+    [
 		'id' => 'adenmcguire',
 		'type' => 'warlock',
 		'first_name' => 'Aden',
@@ -1929,11 +2332,10 @@ $warlocks = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Corey Hunt
+    [
 		'id' => 'coreyhunt',
 		'type' => 'warlock',
 		'first_name' => 'Corey',
@@ -1955,11 +2357,10 @@ $warlocks = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Dagan Devante
+    [
 		'id' => 'dagandevante',
 		'type' => 'warlock',
 		'first_name' => 'Dagan',
@@ -1981,11 +2382,10 @@ $warlocks = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Kharak Roshan
+    [
 		'id' => 'kharakroshan',
 		'type' => 'warlock',
 		'first_name' => 'Kharak',
@@ -2007,11 +2407,10 @@ $warlocks = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// River Lee
+    [
 		'id' => 'riverlee',
 		'type' => 'warlock',
 		'first_name' => 'River',
@@ -2033,11 +2432,10 @@ $warlocks = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Sharon Kennedy (prison)
+    [
 		'id' => 'sharonkennedy',
 		'type' => 'warlock',
 		'first_name' => 'Sharon',
@@ -2059,27 +2457,26 @@ $warlocks = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
-);
+	],
+];
 
-$werewolves = array(
-    array(
+$werewolves = [
+	// Allie Hooper
+    [
 		'id' => 'alliehooper',
 		'type' => 'werewolf',
 		'first_name' => 'Allie',
 		'last_name' => 'Hooper',
 		'aliases' => NULL,
 		'sex' => 'female',
-		'height' => NULL,
-		'weight' => NULL,
+		'height' => 143,
+		'weight' => 42,
 		'dead' => '0',
 		'birth_date' => '10/02/2006',
-		'birth_place' => NULL,
-		'hair' => NULL,
-		'eyes' => NULL,
-		'ethnic_group' => 'unknown',
+		'birth_place' => "Las Vegas, Nevada, Etats-Unis",
+		'hair' => "Roux",
+		'eyes' => "Noisettes",
+		'ethnic_group' => 'white',
 		'status' => 'civilian',
 		'languages' => 'Anglais',
 		'place_id' => 'office_lasvegas_nv',
@@ -2087,25 +2484,24 @@ $werewolves = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Anthony Hooper
+    [
 		'id' => 'anthonyhooper',
 		'type' => 'werewolf',
 		'first_name' => 'Anthony',
 		'last_name' => 'Hooper',
 		'aliases' => NULL,
 		'sex' => 'male',
-		'height' => NULL,
-		'weight' => NULL,
+		'height' => 175,
+		'weight' => 78,
 		'dead' => '0',
 		'birth_date' => '21/04/1976',
-		'birth_place' => NULL,
-		'hair' => NULL,
-		'eyes' => NULL,
-		'ethnic_group' => 'unknown',
+		'birth_place' => "Sacramento, Californie, Las Vegas",
+		'hair' => "Bruns",
+		'eyes' => "Marrons",
+		'ethnic_group' => 'white',
 		'status' => 'civilian',
 		'languages' => 'Anglais',
 		'place_id' => 'office_lasvegas_nv',
@@ -2113,25 +2509,24 @@ $werewolves = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Bess Odell
+    [
 		'id' => 'bessodell',
 		'type' => 'werewolf',
 		'first_name' => 'Bess',
 		'last_name' => 'Odell',
 		'aliases' => NULL,
 		'sex' => 'female',
-		'height' => NULL,
-		'weight' => NULL,
+		'height' => 160,
+		'weight' => 53,
 		'dead' => '0',
 		'birth_date' => '25/05/1981',
-		'birth_place' => NULL,
-		'hair' => NULL,
-		'eyes' => NULL,
-		'ethnic_group' => 'unknown',
+		'birth_place' => "Missoula, Montana, Etats-Unis",
+		'hair' => "Chatains",
+		'eyes' => "Marrons",
+		'ethnic_group' => 'white',
 		'status' => 'civilian',
 		'languages' => 'Anglais',
 		'place_id' => 'office_lasvegas_nv',
@@ -2139,25 +2534,24 @@ $werewolves = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Declan Samson (prison)
+    [
 		'id' => 'declansamson',
 		'type' => 'werewolf',
 		'first_name' => 'Declan',
 		'last_name' => 'Samson',
 		'aliases' => NULL,
 		'sex' => 'male',
-		'height' => NULL,
-		'weight' => NULL,
+		'height' => 206,
+		'weight' => 146,
 		'dead' => '0',
 		'birth_date' => '03/02/1977',
-		'birth_place' => NULL,
-		'hair' => NULL,
-		'eyes' => NULL,
-		'ethnic_group' => 'unknown',
+		'birth_place' => "Nouvelle-Orléans, Louisiane, Etats-Unis",
+		'hair' => "Bruns",
+		'eyes' => "Gris",
+		'ethnic_group' => 'white',
 		'status' => 'prisoner',
 		'languages' => 'Anglais, Français',
 		'place_id' => 'prison_homochitto_ms',
@@ -2165,25 +2559,24 @@ $werewolves = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Garrett Stafford (prison)
+    [
 		'id' => 'garrettstafford',
 		'type' => 'werewolf',
 		'first_name' => 'Garrett',
 		'last_name' => 'Stafford',
 		'aliases' => NULL,
 		'sex' => 'male',
-		'height' => NULL,
-		'weight' => NULL,
+		'height' => 186,
+		'weight' => 72,
 		'dead' => '0',
 		'birth_date' => '15/12/1980',
-		'birth_place' => NULL,
-		'hair' => NULL,
-		'eyes' => NULL,
-		'ethnic_group' => 'unknown',
+		'birth_place' => "Derby, Kansas, Etats-Unis",
+		'hair' => "Roux",
+		'eyes' => "Marrons",
+		'ethnic_group' => 'white',
 		'status' => 'prisoner',
 		'languages' => 'Anglais',
 		'place_id' => 'prison_moreypeak_nv',
@@ -2191,25 +2584,24 @@ $werewolves = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Jackson Cox
+    [
 		'id' => 'jacksoncox',
 		'type' => 'werewolf',
 		'first_name' => 'Jackson',
 		'last_name' => 'Cox',
 		'aliases' => NULL,
 		'sex' => 'male',
-		'height' => NULL,
-		'weight' => NULL,
+		'height' => 175,
+		'weight' => 75,
 		'dead' => '0',
 		'birth_date' => '03/02/1977',
-		'birth_place' => NULL,
-		'hair' => NULL,
-		'eyes' => NULL,
-		'ethnic_group' => 'unknown',
+		'birth_place' => "Portsmouth, Angleterre",
+		'hair' => "Bruns",
+		'eyes' => "Verts",
+		'ethnic_group' => 'white',
 		'status' => 'civilian',
 		'languages' => 'Anglais',
 		'place_id' => 'office_lasvegas_nv',
@@ -2217,25 +2609,24 @@ $werewolves = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Jordan Yeriva (prison)
+    [
 		'id' => 'jordanyeriva',
 		'type' => 'werewolf',
 		'first_name' => 'Jordan',
 		'last_name' => 'Yeriva',
 		'aliases' => NULL,
 		'sex' => 'male',
-		'height' => NULL,
-		'weight' => NULL,
+		'height' => 192,
+		'weight' => 84,
 		'dead' => '0',
 		'birth_date' => '15/12/1987',
-		'birth_place' => NULL,
-		'hair' => NULL,
-		'eyes' => NULL,
-		'ethnic_group' => 'unknown',
+		'birth_place' => "Plovdiv, Bulgarie",
+		'hair' => "Bruns",
+		'eyes' => "Marrons",
+		'ethnic_group' => 'white',
 		'status' => 'prisoner',
 		'languages' => 'Anglais, Bulgare',
 		'place_id' => 'prison_moreypeak_nv',
@@ -2243,25 +2634,24 @@ $werewolves = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Kendrick Tendor
+    [
 		'id' => 'kendricktendor',
 		'type' => 'werewolf',
 		'first_name' => 'Kendrick',
 		'last_name' => 'Tendor',
 		'aliases' => NULL,
 		'sex' => 'male',
-		'height' => NULL,
-		'weight' => NULL,
+		'height' => 179,
+		'weight' => 92,
 		'dead' => '0',
 		'birth_date' => '28/07/1953',
-		'birth_place' => NULL,
-		'hair' => NULL,
-		'eyes' => NULL,
-		'ethnic_group' => 'unknown',
+		'birth_place' => "Las Vegas, Nevada, Etats-Unis",
+		'hair' => "Gris",
+		'eyes' => "Bleus",
+		'ethnic_group' => 'white',
 		'status' => 'civilian',
 		'languages' => 'Anglais',
 		'place_id' => 'office_lasvegas_nv',
@@ -2269,11 +2659,10 @@ $werewolves = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Lucille Dotson
+    [
 		'id' => 'lucilledotson',
 		'type' => 'werewolf',
 		'first_name' => 'Lucille',
@@ -2295,11 +2684,10 @@ $werewolves = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Nora Gibbons
+    [
 		'id' => 'noragibbons',
 		'type' => 'werewolf',
 		'first_name' => 'Nora',
@@ -2321,25 +2709,24 @@ $werewolves = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Ozzy Wade
+    [
 		'id' => 'ozzywade',
 		'type' => 'werewolf',
 		'first_name' => 'Ozzy',
 		'last_name' => 'Wade',
 		'aliases' => NULL,
 		'sex' => 'male',
-		'height' => NULL,
-		'weight' => NULL,
+		'height' => 188,
+		'weight' => 85,
 		'dead' => '0',
 		'birth_date' => '21/03/1962',
-		'birth_place' => NULL,
-		'hair' => NULL,
-		'eyes' => NULL,
-		'ethnic_group' => 'unknown',
+		'birth_place' => "Baker, Nevada, Etats-Unis",
+		'hair' => "Chatains",
+		'eyes' => "Bleus clairs",
+		'ethnic_group' => 'white',
 		'status' => 'civilian',
 		'languages' => 'Anglais, Féérique, Démoniaque',
 		'place_id' => 'office_lasvegas_nv',
@@ -2347,11 +2734,10 @@ $werewolves = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Roy Turner (prison)
+    [
 		'id' => 'royturner',
 		'type' => 'werewolf',
 		'first_name' => 'Roy',
@@ -2373,11 +2759,10 @@ $werewolves = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Victor Mooney
+    [
 		'id' => 'victormooney',
 		'type' => 'werewolf',
 		'first_name' => 'Victor',
@@ -2399,11 +2784,10 @@ $werewolves = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Zoe Chapman (prison)
+    [
 		'id' => 'zoechapman',
 		'type' => 'werewolf',
 		'first_name' => 'Zoe',
@@ -2425,13 +2809,12 @@ $werewolves = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-    ),
-);
+    ],
+];
 
-$wanteds = array(
-    array(
+$wanteds = [
+	// Basriel Nix
+    [
 		'id' => 'basrielnix',
 		'type' => 'human',
 		'first_name' => 'Basriel',
@@ -2453,41 +2836,14 @@ $wanteds = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
-		'id' => 'claytonmoore',
-		'type' => 'human',
-		'first_name' => 'Clayton',
-		'last_name' => 'Moore',
-		'aliases' => 'Clayton Moore, Le Doc, Docteur',
-		'sex' => 'male',
-		'height' => '182',
-		'weight' => '81',
-		'dead' => '0',
-		'birth_date' => '30/05/1970',
-		'birth_place' => 'Athens, Georgie, Etats-Unis',
-		'hair' => 'Chatain',
-		'eyes' => 'Bleus',
-		'ethnic_group' => 'white',
-		'status' => 'wanted',
-		'languages' => 'Anglais, Allemand, Espagnol',
-		'place_id' => 'office_lasvegas_nv',
-		'group_id' => NULL,
-		'sire_id' => NULL,
-		'self_control' => '0',
-		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
-
-    array(
+	// L'Homme Masque
+    [
 		'id' => 'hommemasque',
 		'type' => 'unknown',
-		'first_name' => 'L\'',
-		'last_name' => 'Homme Masqué',
+		'first_name' => 'L\'Homme Masqué',
+		'last_name' => '',
 		'aliases' => 'L\'Homme Masqué',
 		'sex' => 'male',
 		'height' => NULL,
@@ -2505,11 +2861,10 @@ $wanteds = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Leslie Lohflower
+    [
 		'id' => 'leslielohflower',
 		'type' => 'werewolf',
 		'first_name' => 'Leslie',
@@ -2531,11 +2886,10 @@ $wanteds = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Micah Fuchs
+    [
 		'id' => 'micahfuchs',
 		'type' => 'werewolf',
 		'first_name' => 'Micah',
@@ -2557,11 +2911,10 @@ $wanteds = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
+	],
 
-    array(
+	// Otto
+    [
 		'id' => 'otto',
 		'type' => 'warlock',
 		'first_name' => 'Otto',
@@ -2583,7 +2936,259 @@ $wanteds = array(
 		'sire_id' => NULL,
 		'self_control' => '0',
 		'demon_id' => NULL,
-		'created_at' => NULL,
-		'updated_at' => NULL
-	),
-);
+	],
+
+	// Curtis Levesque
+	[
+		'id' => 'curtislevesque',
+		'type' => 'werewolf',
+		'first_name' => 'Curtis',
+		'last_name' => 'Levesque',
+		'aliases' => 'Curtis Levesque',
+		'sex' => 'male',
+		'height' => NULL,
+		'weight' => NULL,
+		'dead' => '0',
+		'birth_date' => '17/09/1936',
+		'birth_place' => 'Temple, Géorgie, Etats-Unis',
+		'hair' => 'Gris',
+		'eyes' => 'Marrons',
+		'ethnic_group' => 'white',
+		'status' => 'wanted',
+		'languages' => 'Anglais',
+		'place_id' => 'office_philadelphie_pa',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL
+	],
+
+	// Aldo Caballero
+	[
+		'id' => 'aldocaballero',
+		'type' => 'warlock',
+		'first_name' => 'Aldo',
+		'last_name' => 'Caballero',
+		'aliases' => 'Aldo Caballero, Smoke, SM0-ke',
+		'sex' => 'male',
+		'height' => '174',
+		'weight' => '75',
+		'dead' => '0',
+		'birth_date' => '21/02/1591',
+		'birth_place' => 'Quilmes, Argantina',
+		'hair' => 'Chatains',
+		'eyes' => 'Gris',
+		'ethnic_group' => 'hispanic',
+		'status' => 'wanted',
+		'languages' => 'Anglais, Espagnol',
+		'place_id' => 'office_watertown_ny',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL
+	],
+
+	// Lazare Thornton
+	[
+		'id' => 'lazarethornton',
+		'type' => 'vampire',
+		'first_name' => 'Lazare',
+		'last_name' => 'Thornton',
+		'aliases' => 'Lazare Thornton, Monsieur L., Le Roi de l\'Escapade, escape_king',
+		'sex' => 'male',
+		'height' => '173',
+		'weight' => '71',
+		'dead' => '0',
+		'birth_date' => '23/07/1837',
+		'birth_place' => 'Cortland, Ohio, Etats-Unis',
+		'hair' => 'Noirs',
+		'eyes' => 'Marrons',
+		'ethnic_group' => 'white',
+		'status' => 'wanted',
+		'languages' => 'Anglais',
+		'place_id' => 'office_jackson_ms',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '1',
+		'demon_id' => NULL
+	],
+  
+	// Steven Maher
+	[
+		'id' => 'stevenmaher',
+		'type' => 'warlock',
+		'first_name' => 'Steven',
+		'last_name' => 'Maher',
+		'aliases' => 'Steven Mahers',
+		'sex' => 'male',
+		'height' => '172',
+		'weight' => '78',
+		'dead' => '0',
+		'birth_date' => '14/05/1712',
+		'birth_place' => 'Crestwood, Kentucky, Etats-Unis',
+		'hair' => 'Chatains',
+		'eyes' => 'Marrons',
+		'ethnic_group' => 'white',
+		'status' => 'wanted',
+		'languages' => 'Anglais',
+		'place_id' => 'office_desmoines_ia',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL
+	],
+
+	// Herschel Mayer, Le Dissocieur
+	[
+		'id' => 'herschelmayer',
+		'type' => 'human',
+		'first_name' => 'Herschel',
+		'last_name' => 'Mayer',
+		'aliases' => 'Herschel Mayer, Le Dissocieur, Le Déplaceur',
+		'sex' => 'male',
+		'height' => '183',
+		'weight' => '78',
+		'dead' => '0',
+		'birth_date' => '29/05/1977',
+		'birth_place' => 'Glendale Heights village, Illinois, Etats-Unis',
+		'hair' => 'Chatains',
+		'eyes' => 'Bleus',
+		'ethnic_group' => 'white',
+		'status' => 'wanted',
+		'languages' => 'Anglais, Espagnol',
+		'place_id' => 'office_washington_dc',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL
+	],
+
+	// Never Espinoza
+	[
+		'id' => 'neverespinoza',
+		'type' => 'human',
+		'first_name' => 'Never',
+		'last_name' => 'Espinoza',
+		'aliases' => 'Never Espinoza',
+		'sex' => 'male',
+		'height' => '178',
+		'weight' => '73',
+		'dead' => '0',
+		'birth_date' => '04/08/1994',
+		'birth_place' => 'Villavicencio, Colombie',
+		'hair' => 'Noirs',
+		'eyes' => 'Marrons',
+		'ethnic_group' => 'hispanic',
+		'status' => 'wanted',
+		'languages' => 'Anglais, Espagnol',
+		'place_id' => 'office_littlerock_ar',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL
+	],
+
+	// Estell Pagano
+	[
+		'id' => 'estellpagano',
+		'type' => 'human',
+		'first_name' => 'Estell',
+		'last_name' => 'Pagano',
+		'aliases' => 'Estell Pagano',
+		'sex' => 'female',
+		'height' => '171',
+		'weight' => '75',
+		'dead' => '0',
+		'birth_date' => '19/10/1978',
+		'birth_place' => 'Princeton, Virginie-Occidentale, Etats-Unis',
+		'hair' => 'Noirs',
+		'eyes' => 'Marrons',
+		'ethnic_group' => 'black',
+		'status' => 'wanted',
+		'languages' => 'Anglais',
+		'place_id' => 'office_dallas_tx',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL
+	],
+  
+	// Melony Weatherford
+	[
+		'id' => 'melonyweatherford',
+		'type' => 'werewolf',
+		'first_name' => 'Melony',
+		'last_name' => 'Weatherford',
+		'aliases' => 'Melony Weatherford',
+		'sex' => 'female',
+		'height' => '167',
+		'weight' => '58',
+		'dead' => '0',
+		'birth_date' => '05/02/1962',
+		'birth_place' => 'San Diego, Californie, Etats-Unis',
+		'hair' => 'Blancs',
+		'eyes' => 'Bleus',
+		'ethnic_group' => 'white',
+		'status' => 'wanted',
+		'languages' => 'Anglais',
+		'place_id' => 'office_dallas_tx',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL
+	],
+
+	// Velvet Janssen
+	[
+		'id' => 'velvetjanssen',
+		'type' => 'warlock',
+		'first_name' => 'Velvet',
+		'last_name' => 'Janssen',
+		'aliases' => 'Velvet Janssen',
+		'sex' => 'female',
+		'height' => '168',
+		'weight' => '58',
+		'dead' => '0',
+		'birth_date' => '30/04/1768',
+		'birth_place' => 'Gävle, Suède',
+		'hair' => 'Chatains',
+		'eyes' => 'Noisettes',
+		'ethnic_group' => 'white',
+		'status' => 'wanted',
+		'languages' => 'Anglais',
+		'place_id' => 'office_dallas_tx',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL
+	],
+
+  
+];
+
+$prisoners = [
+	// Clayton Moore, Le Doc
+    [
+		'id' => 'claytonmoore',
+		'type' => 'human',
+		'first_name' => 'Clayton',
+		'last_name' => 'Moore',
+		'aliases' => 'Clayton Moore, Le Doc, Docteur',
+		'sex' => 'male',
+		'height' => '182',
+		'weight' => '81',
+		'dead' => '0',
+		'birth_date' => '30/05/1970',
+		'birth_place' => 'Athens, Georgie, Etats-Unis',
+		'hair' => 'Chatain',
+		'eyes' => 'Bleus',
+		'ethnic_group' => 'white',
+		'status' => 'prisoner',
+		'languages' => 'Anglais, Allemand, Espagnol',
+		'place_id' => 'office_lasvegas_nv',
+		'group_id' => NULL,
+		'sire_id' => NULL,
+		'self_control' => '0',
+		'demon_id' => NULL,
+	],
+];
