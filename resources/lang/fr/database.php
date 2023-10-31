@@ -44,5 +44,5 @@ return [
     'no_charges_filed' => "Aucune accusation",
     'vacated' => "Supprimé",
     'pending' => "Procédure en cours",
-    'suspended' => "Condamnation avec sursis"
+    'suspended' => "Condamnation avec sursis",
 ];

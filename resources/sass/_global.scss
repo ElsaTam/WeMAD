@@ -77,3 +77,23 @@ span[data-bs-toggle="tooltip"] {
 .btn:focus {
     box-shadow: none;
 }
+
+.font-italic {
+    font-style: italic;
+}
+
+.font-weight-bold {
+    font-weight: bold;
+}
+
+.accordion-flush .accordion-button:not(.collapsed) {
+    color: inherit;
+    background-color: inherit;
+    box-shadow: none;
+}
+.accordion-flush .accordion-button:focus {
+    z-index: 3;
+    border-color: inherit;
+    outline: 0;
+    box-shadow: none;
+}

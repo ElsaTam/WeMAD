@@ -24,21 +24,26 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('people')->delete();
+        //DB::table('people')->delete();
 
-        DB::table('groups')->delete();
-        DB::table('group_types')->delete();
+        DB::table('organisations')->delete();
 
-        DB::table('states')->delete();
+        //DB::table('groups')->delete();
+        //DB::table('group_types')->delete();
+
+        //DB::table('states')->delete();
+        //DB::table('countries')->delete();
 
         srand(32);
 
-        $this->call(StateSeeder::class);
-        $this->call(PlaceSeeder::class);
-        $this->call(GroupSeeder::class);
-        $this->call(PersonSeeder::class);
-        $this->call(CriminalRecordSeeder::class);
-        $this->call(PhotoSeeder::class);
+        //$this->call(CountrySeeder::class);
+        //$this->call(StateSeeder::class);
+        //$this->call(PlaceSeeder::class);
+        //$this->call(GroupSeeder::class);
+        $this->call(OrganisationSeeder::class);
+        //$this->call(PersonSeeder::class);
+        //$this->call(CriminalRecordSeeder::class);
+        //$this->call(PhotoSeeder::class);
 
         //$this->populate_random();
         //$this->tmp_random_crimes();

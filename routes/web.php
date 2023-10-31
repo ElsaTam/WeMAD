@@ -43,9 +43,12 @@ Route::get('packs/{id}', 'GroupController@getGroup');
 Route::get('clans/{id}', 'GroupController@getGroup');
 Route::get('circles/{id}', 'GroupController@getGroup');
 
+Route::get('ressources/in-the-world/organisations', 'OrganisationController@getWorldOrganisations');
+
 Route::get('ressources/', function() { return view('ressources/ressources'); });
 Route::get('ressources/{page}', function($page) { return view('ressources/'.$page.'/'.$page); });
 Route::get('ressources/{folder}/{page}', function($folder, $page) { return view('ressources/'.$folder.'/pages/'.$page); });
+
 
 Route::get('database', function() { return view('database/database'); });
 Route::get('database/people', function() { return view('database/database-people'); });

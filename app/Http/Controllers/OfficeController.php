@@ -17,9 +17,9 @@ class OfficeController extends Controller
 
     public function getOffices() {
         $offices = $this->fetchOffices();
-        $council_west   = $offices->where('state.council', 'Ouest');
-        $council_center = $offices->where('state.council', 'Centre');
-        $council_est    = $offices->where('state.council', 'Est');
+        $council_west   = $offices->where('state.council', 'west');
+        $council_center = $offices->where('state.council', 'center');
+        $council_est    = $offices->where('state.council', 'east');
         $council_none   = $offices->where('state.council', Null);
 
         return view('offices/offices-map')
