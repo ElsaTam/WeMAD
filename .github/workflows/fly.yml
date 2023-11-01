@@ -16,11 +16,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: superfly/flyctl-actions/setup-flyctl@master
-      - run:  |
-        flyctl machine start 148ed431f39658
-        flyctl ssh console -C "mkdir storage/framework/cache/data"
-        flyctl ssh console -C "php artisan config:cache"
-        flyctl ssh console -C "php artisan cache:clear"
-        composer dump-autoload
-        composer install
-        flyctl deploy --remote-only
+      - run: flyctl machine start 148ed431f39658; flyctl ssh console -C "mkdir storage/framework/cache/data"; flyctl ssh console -C "php artisan config:cache"; flyctl ssh console -C "php artisan cache:clear"; composer dump-autoload; composer install; flyctl deploy --remote-only
