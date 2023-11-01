@@ -15,7 +15,7 @@ var simplemaps_usmap_mapdata={
     state_description: "",
     state_color: "#77bcff",
     state_hover_color: "#038EEB",
-    state_url: "http://simplemaps.com",
+    state_url: "#",
     all_states_inactive: "no",
     location_description: "",
     location_color: "#ff4646",

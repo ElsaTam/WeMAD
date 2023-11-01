@@ -45,6 +45,8 @@ Route::get('circles/{id}', 'GroupController@getGroup');
 
 Route::get('ressources/in-the-world/organisations', 'OrganisationController@getWorldOrganisations');
 
+Route::get('ressources/in-the-world/country/{id}', 'CountryController@getCountry');
+
 Route::get('ressources/', function() { return view('ressources/ressources'); });
 Route::get('ressources/{page}', function($page) { return view('ressources/'.$page.'/'.$page); });
 Route::get('ressources/{folder}/{page}', function($folder, $page) { return view('ressources/'.$folder.'/pages/'.$page); });

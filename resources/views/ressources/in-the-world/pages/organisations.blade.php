@@ -26,14 +26,7 @@ $organisations = $organisations_danger_0->concat($organisations_danger_1)->conca
     </div>
 
     <div class="col-sm-4">
-        <div class="card position-sticky d-none" id="descr_card" style="top: 20px;">
-            <div class="card-header font-weight-bold" id="descr_name"></div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item card-subtitle mb-2 font-italic" id="descr_name_fr"></li>
-                <li class="list-group-item card-text" id="organisation_description"></li>
-                <li class="list-group-item"><span class="font-weight-bold">Pays</span> (<span id="descr_countries_number"></span>) : <span id="descr_countries"></span></li>
-            </ul>
-        </div>
+        @include("ressources.in-the-world.pages.inc.organisation-card", ["organisation" => NULL])
     </div>
 </div>
 
@@ -44,43 +37,41 @@ $organisations = $organisations_danger_0->concat($organisations_danger_1)->conca
 @section('scripts')
 <script>
     function displayDescr(organisation) {
-        console.log(organisation);
-
-        $('#descr_card').removeClass("d-none");
+        $('.card_orga').removeClass("d-none");
 
         var _title = organisation.name;
         if (organisation.acronym != "") _title += " (" + organisation.acronym + ")";
-        $("#descr_name").html(_title);
-        $("#descr_name").removeClass("bg-success bg-warning bg-danger text-white");
-        $("#descr_name_fr").removeClass("bg-success bg-warning bg-danger text-light text-muted");
+        $(".card_orga_name").html(_title);
+        $(".card_orga_name").removeClass("bg-success bg-warning bg-danger text-white");
+        $(".card_orga_name_fr").removeClass("bg-success bg-warning bg-danger text-light text-muted");
         switch(organisation.danger_level) {
             case 0:
-                $("#descr_name").addClass("bg-success text-white");
-                $("#descr_name_fr").addClass("bg-success text-light");
+                $(".card_orga_name").addClass("bg-success text-white");
+                $(".card_orga_name_fr").addClass("bg-success text-light");
                 break;
             case 1:
-                $("#descr_name").addClass("bg-warning");
-                $("#descr_name_fr").addClass("bg-warning text-muted");
+                $(".card_orga_name").addClass("bg-warning");
+                $(".card_orga_name_fr").addClass("bg-warning text-muted");
                 break;
             case 2:
-                $("#descr_name").addClass("bg-danger text-white");
-                $("#descr_name_fr").addClass("bg-danger text-light");
+                $(".card_orga_name").addClass("bg-danger text-white");
+                $(".card_orga_name_fr").addClass("bg-danger text-light");
                 break;
         }
         
-        $("#descr_name_fr").html(organisation.name_fr);
+        $(".card_orga_name_fr").html(organisation.name_fr);
 
         var _countries = organisation.countries[0].name;
         for (let i = 1; i < organisation.countries.length; ++i) {
             _countries += ", " + organisation.countries[i].name;
         }
-        $("#descr_countries").html(_countries);
-        $("#descr_countries_number").text( organisation.countries.length);
+        $(".card_orga_countries").html(_countries);
+        $(".card_orga_countries_number").text( organisation.countries.length);
 
         var _html = "";
         _html += organisation.description;
-        $("#organisation_description").html(_html);
-        $("#organisation_description a[data-orga-ref]").each(function() {
+        $(".card_orga_description").html(_html);
+        $(".card_orga_description a[data-orga-ref]").each(function() {
             const value = $(this).attr('data-orga-ref');
             const command = "displayDescrById('" + value + "'); return false;";
             $(this).attr("href", "#");
@@ -153,6 +144,7 @@ $organisations = $organisations_danger_0->concat($organisations_danger_1)->conca
     function end_countries_init(countries) {
         for (const [country_id, country] of Object.entries(countries)) {
             countries[country_id]["description"] += "</ul>";
+            countries[country_id]["url"] = "country/" + country_id;
             if (countries[country_id]["n_organisations"] > 0) {
                 countries[country_id]["security_index"] /= countries[country_id]["n_organisations"];
                 countries[country_id]["color"] = get_security_color(countries[country_id]["security_index"]);
@@ -236,6 +228,7 @@ $organisations = $organisations_danger_0->concat($organisations_danger_1)->conca
     }
 
     $(document).ready(function(){
+        $('.card_orga').addClass("d-none");
         $("#search_organisation").on("keyup", function() {
             var value = $(this).val().toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '');
             $(".organisation-list a").filter(function() {
