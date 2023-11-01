@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: superfly/flyctl-actions/setup-flyctl@master
-      - run: flyctl ssh console -C "ls storage/framework/cache/"
+      - run: flyctl ssh console -C "mkdir storage/framework/cache/data"
 
 #  composer-update:
 #    name: Update composer
