@@ -14,7 +14,7 @@ jobs:
     name: Create cache
     runs-on: ubuntu-latest
     steps:
-      - run: ls /home/runner/work/WeMAD/WeMAD/
+      - run: ls /home/runner/work/WeMAD/WeMAD/storage/
 #  composer-update:
 #    name: Update composer
 #    runs-on: ubuntu-latest
