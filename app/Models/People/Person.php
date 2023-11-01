@@ -143,7 +143,7 @@ class Person extends Model
     }
 
     public function getIsRenegadeAttribute() {
-        return $this->group_id == NULL && ! $this->dead;
+        return $this->group_id == NULL && $this->is_hidden_creature && ! $this->dead;
     }
 
     public function getIsLeaderAttribute() {
