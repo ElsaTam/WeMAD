@@ -10,6 +10,11 @@ env:
   FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 
 jobs:
+  create-cache:
+    name: Create cache
+    runs-on: ubuntu-latest
+    steps:
+      - run: ls storage/framework/cache
   composer-update:
     name: Update composer
     runs-on: ubuntu-latest
