@@ -14,7 +14,9 @@ jobs:
     name: Create cache
     runs-on: ubuntu-latest
     steps:
-      - run: fly ssh console -C "storage/framework/cache/"
+      - uses: actions/checkout@v3
+      - uses: superfly/flyctl-actions/setup-flyctl@master
+      - run: flyctl ssh console -C "storage/framework/cache/"
 #  composer-update:
 #    name: Update composer
 #    runs-on: ubuntu-latest
