@@ -10,19 +10,17 @@ env:
   FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 
 jobs:
-  create-cache:
-    name: Deploy app
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: superfly/flyctl-actions/setup-flyctl@master
-      - run: flyctl ssh console -C "mkdir storage/framework/cache/data"
-
   deploy:
     name: Deploy app
     runs-on: ubuntu-latest
-    needs: create-cache
     steps:
       - uses: actions/checkout@v3
       - uses: superfly/flyctl-actions/setup-flyctl@master
-      - run: flyctl deploy --remote-only
+      - run:  |
+        flyctl machine start 148ed431f39658
+        flyctl ssh console -C "mkdir storage/framework/cache/data"
+        flyctl ssh console -C "php artisan config:cache"
+        flyctl ssh console -C "php artisan cache:clear"
+        composer dump-autoload
+        composer install
+        flyctl deploy --remote-only
