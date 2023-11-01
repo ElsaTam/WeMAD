@@ -41,7 +41,7 @@ class PhotoSeeder extends Seeder
 
     private function seed_handmade_featured_photo()
     {
-        include 'handmade\People.php';
+        include 'handmade/People.php';
         
         $agents = array_merge($office_bosses, $hunters);
 
@@ -49,7 +49,9 @@ class PhotoSeeder extends Seeder
 
         foreach ($types as $type) {
             foreach (${$type} as $person) {
-                $src = "/storage/pictures/".$type."/";
+                $ai = "";
+                if ($type == "agents") $ai = "ai_";
+                $src = "/storage/pictures/".$ai.$type."/";
                 if ($person['first_name'] != '' && $person['last_name'] != '') {
                     $src = $src.$person['first_name']."_".$person['last_name'];
                 } else if ($person['last_name'] == '') {

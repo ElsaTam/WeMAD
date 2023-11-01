@@ -2,14 +2,15 @@
 
 namespace App\Models\People;
 
+use Parental\HasParent;
 use Illuminate\Database\Eloquent\Model;
 
 class Demon extends Person
 {
-    protected static $singleTableType = 'demon';
+    use HasParent;
     
     protected $fillable = [
-        
+        'type'
     ];
 
     public function warlocks()

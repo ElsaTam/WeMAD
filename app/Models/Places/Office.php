@@ -2,15 +2,16 @@
 
 namespace App\Models\Places;
 
+use Parental\HasParent;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\People\Human;
 
 class Office extends Place
 {
-    protected static $singleTableType = 'office';
+    use HasParent;
 
     protected $fillable = [
-        
+        'type'
     ];
 
     // -----------------------------

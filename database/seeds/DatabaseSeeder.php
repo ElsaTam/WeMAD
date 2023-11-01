@@ -24,26 +24,30 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        //DB::table('people')->delete();
-
+        DB::table('messages')->delete();
+        DB::table('photos')->delete();
+        DB::table('crimes')->delete();
+        DB::table('criminal_records')->delete();
+        DB::table('prisoner_records')->delete();
+        DB::table('people')->delete();
         DB::table('organisations')->delete();
-
-        //DB::table('groups')->delete();
-        //DB::table('group_types')->delete();
-
-        //DB::table('states')->delete();
-        //DB::table('countries')->delete();
+        DB::table('groups')->delete();
+        DB::table('group_types')->delete();
+        DB::table('places')->delete();
+        DB::table('states')->delete();
+        DB::table('countries')->delete();
+        DB::table('country_organisation')->delete();
 
         srand(32);
 
-        //$this->call(CountrySeeder::class);
-        //$this->call(StateSeeder::class);
-        //$this->call(PlaceSeeder::class);
-        //$this->call(GroupSeeder::class);
+        $this->call(CountrySeeder::class);
+        $this->call(StateSeeder::class);
+        $this->call(PlaceSeeder::class);
+        $this->call(GroupSeeder::class);
         $this->call(OrganisationSeeder::class);
-        //$this->call(PersonSeeder::class);
-        //$this->call(CriminalRecordSeeder::class);
-        //$this->call(PhotoSeeder::class);
+        $this->call(PersonSeeder::class);
+        $this->call(CriminalRecordSeeder::class);
+        $this->call(PhotoSeeder::class);
 
         //$this->populate_random();
         //$this->tmp_random_crimes();
@@ -116,39 +120,40 @@ class DatabaseSeeder extends Seeder
         $offices = PlacesData::offices();
         $prisons = PlacesData::prisons();
 
-        $n_wanteds = 212; // 212
-        $n_missings = 0; // 43
+        $n_wanteds = 10; // 10
+        $n_missings = 5; // 5
         $n_prisoners = [
-            'min' => 20, // 20
-            'max' => 60 // 60
+            'min' => 1, // 1
+            'max' => 10 // 10
         ];
         $n_vampires = [
-            'min' => 0, // 3
-            'max' => 0, // 10
-            'renegades' => 0, // 228
-            'deads' => 0 // 513
+            'min' => 1, // 1
+            'max' => 5, // 5
+            'renegades' => 10, // 10
+            'deads' => 40 // 40
         ];
-        $pick_sires = False; // True
+        $pick_sires = True; // True
         $n_warlocks = [
-            'min' => 0, // 2
-            'max' => 0, // 7
-            'renegades' => 0, // 65
-            'deads' => 0 // 248
+            'min' => 1, // 1
+            'max' => 5, // 5
+            'renegades' => 10, // 10
+            'deads' => 0 // 0
         ];
         $n_werewolves = [
-            'min' => 0, // 4
-            'max' => 0, // 15
-            'renegades' => 0, // 113
-            'deads' => 0 // 1065
+            'min' => 1, // 1
+            'max' => 5, // 5
+            'renegades' => 10, // 10
+            'deads' => 0 // 0
         ];
-        $n_humans = 0; // 112
+        $n_humans = 12; // 12
         $n_agents = [
-            'min' => 0, // 15
-            'max' => 0 // 30
+            'min' => 1, // 2
+            'max' => 5 // 5
         ];
 
         // Wanteds
-        echo "Seeding Wanteds...\n";
+        echo "Seeding Wanteds...";
+        $time_start = microtime(true);
         factory(Person::class, $n_wanteds)
             ->make(['status' => 'wanted'])
             ->each(function ($person) use ($helper) {
@@ -174,18 +179,24 @@ class DatabaseSeeder extends Seeder
                     ->state($n_crimes.'_crimes')
                     ->create(['person_id' => $person->id]);
         });
+        $execution_time = (microtime(true) - $time_start)/60;
+        echo " done (".$execution_time.")\n";
 
         // Missings
-        echo "Seeding Missings...\n";
+        echo "Seeding Missings...";
+        $time_start = microtime(true);
         factory(Person::class, $n_missings)
             ->make(['status' => 'missing'])
             ->each(function ($person) {
                 $this->insert("people", $person);
             });
+        $execution_time = (microtime(true) - $time_start)/60;
+        echo " done (".$execution_time.")\n";
             
         
-            // Prisoners
-        echo "Seeding Prisoners...\n";
+        // Prisoners
+        echo "Seeding Prisoners...";
+        $time_start = microtime(true);
         foreach ($prisons as $id => $value) {
             $n_members = $n_prisoners['max'] > $n_prisoners['min'] ? rand($n_prisoners['min'], $n_prisoners['max']) : 0;
             factory(Person::class, $n_members)
@@ -215,16 +226,30 @@ class DatabaseSeeder extends Seeder
                         ->create(['person_id' => $person->id]);
             });
         }
+        $execution_time = (microtime(true) - $time_start)/60;
+        echo " done (".$execution_time.")\n";
 
-        echo "Seeding Vampires...\n";
+        echo "Seeding Vampires...";
+        $time_start = microtime(true);
         $this->random_type('vampire', 'clan', $n_vampires);
-        echo "Seeding Warlocks...\n";
+        $execution_time = (microtime(true) - $time_start)/60;
+        echo " done (".$execution_time.")\n";
+
+        echo "Seeding Warlocks...";
+        $time_start = microtime(true);
         $this->random_type('warlock', 'circle', $n_warlocks);
-        echo "Seeding Werewolves...\n";
+        $execution_time = (microtime(true) - $time_start)/60;
+        echo " done (".$execution_time.")\n";
+
+        echo "Seeding Werewolves...";
+        $time_start = microtime(true);
         $this->random_type('werewolf', 'pack', $n_werewolves);
+        $execution_time = (microtime(true) - $time_start)/60;
+        echo " done (".$execution_time.")\n";
 
         // Create sires and breed
-        echo "Seeding Sires...\n";
+        echo "Seeding Sires...";
+        $time_start = microtime(true);
         if ($pick_sires) {
             $vampires = DB::table("people")
                 ->where('type', 'vampire')
@@ -234,15 +259,21 @@ class DatabaseSeeder extends Seeder
                 DB::table('people')->where('id', $vampire->id)->update(['sire_id' => $sire]);
             }
         }
+        $execution_time = (microtime(true) - $time_start)/60;
+        echo " done (".$execution_time.")\n";
 
         // Humans
-        echo "Seeding Humans...\n";
+        echo "Seeding Humans...";
+        $time_start = microtime(true);
         factory(Person::class, $n_humans)
             ->states('human')
             ->create();
+        $execution_time = (microtime(true) - $time_start)/60;
+        echo " done (".$execution_time.")\n";
 
         // Agents
-        echo "Seeding Agents...\n";
+        echo "Seeding Agents...";
+        $time_start = microtime(true);
         foreach ($offices as $id => $value) {
             if ($id == "office_lasvegas_nv") continue;
             $n_members = $n_agents['max'] > $n_agents['min'] ? rand($n_agents['min'], $n_agents['max']) : 0;
@@ -253,6 +284,8 @@ class DatabaseSeeder extends Seeder
                     'status' => 'agent'
                 ]);
         }
+        $execution_time = (microtime(true) - $time_start)/60;
+        echo " done (".$execution_time.")\n";
     }
 
     private function random_type(string $state, string $type, $n_people)

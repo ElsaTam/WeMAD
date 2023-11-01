@@ -18,7 +18,7 @@ class CreatePhotosTable extends Migration
                 $table->string('id')->primary();
                 $table->string('src')->unique();
                 $table->string('person_id');
-                $table->foreign('person_id')->references('id')->on('people')->onDelete('cascade');
+                //$table->foreign('person_id')->references('id')->on('people')->onDelete('cascade');
                 $table->timestamps();
             });
         }

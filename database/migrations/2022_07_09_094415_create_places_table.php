@@ -20,7 +20,7 @@ class CreatePlacesTable extends Migration
             $table->string('name');
             $table->string('boss_id')->nullable();
             $table->string('state_id');
-            $table->foreign('state_id')->references('id')->on('states')->onDelete('cascade');
+            //$table->foreign('state_id')->references('id')->on('states')->onDelete('cascade');
             $table->timestamps();
 
             // Office

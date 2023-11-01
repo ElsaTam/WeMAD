@@ -23,7 +23,7 @@ class PersonFaker
 
     public function person(?string $type)
     {
-        include 'Data\BirthPlaces.php';
+        include 'Data/BirthPlaces.php';
         $place_faker = new PlaceFaker();
 
         if (!$type) $type = $this->type();
@@ -228,7 +228,7 @@ class PersonFaker
     public function height()
     {
         $height = $this->helper->stats_rand_gen_normal(1.7, 0.1);
-        return max(1.4, min(2.2, $height)) * 100 + rand(0, 9);
+        return round(max(1.4, min(2.2, $height)) * 100 + rand(0, 9), 0);
     }
 
     public function weight(int $height)
@@ -270,7 +270,7 @@ class PersonFaker
                 $bmi = rand(400, 410) / 10;
                 break;
         }
-        return $bmi * ($height / 100) * ($height / 100);
+        return round($bmi * ($height / 100) * ($height / 100), 0);
     }
 
     public function birth_date(string $type)

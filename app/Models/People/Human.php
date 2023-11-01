@@ -2,6 +2,9 @@
 
 namespace App\Models\People;
 
+use Parental\HasChildren;
+use Parental\HasParent;
+
 use Illuminate\Database\Eloquent\Model;
 use App\Custom\Date;
 use App\Models\Places\Place;
@@ -9,10 +12,10 @@ use App\Models\Message;
 
 class Human extends Person
 {
-    protected static $singleTableSubclasses = [HiddenHuman::class];
-    protected static $singleTableType = 'human';
+    use HasParent;
 
     protected $fillable = [
+        'type',
         'birth_date',
         'birth_place',
         'hair',

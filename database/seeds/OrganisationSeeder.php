@@ -11,7 +11,7 @@ class OrganisationSeeder extends Seeder
      */
     public function run()
     {
-        include 'handmade\Organisations.php';
+        include 'handmade/Organisations.php';
         $organisations_copy = $organisations;
         $pivot = [];
         foreach ($organisations_copy as $key => $organisation) {

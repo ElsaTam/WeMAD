@@ -2,13 +2,16 @@
 
 namespace App\Models\People;
 
+use Parental\HasParent;
 use Illuminate\Database\Eloquent\Model;
 
-class Vampire extends HiddenHuman
+class Vampire extends Person
 {
-    protected static $singleTableType = 'vampire';
+    use HasParent;
 
     protected $fillable = [
+        'type',
+        'group_id',
         'sire_id',
         'self_control'
     ];

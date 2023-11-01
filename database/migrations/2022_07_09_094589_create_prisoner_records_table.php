@@ -15,7 +15,7 @@ class CreatePrisonerRecordsTable extends Migration
     {
         Schema::create('prisoner_records', function (Blueprint $table) {
             $table->string('person_id')->primary();
-            $table->foreign('person_id')->references('id')->on('people')->onDelete('cascade');
+            //$table->foreign('person_id')->references('id')->on('people')->onDelete('cascade');
             
             $table->string('entry_date');
             $table->integer('sentence'); // number of months

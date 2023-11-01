@@ -37,7 +37,7 @@ class CreatePeopleTable extends Migration
                 $table->enum('status', ['missing', 'wanted', 'agent', 'civilian', 'prisoner'])->default('civilian');
                 $table->string('languages')->nullable();
                 $table->string('place_id')->nullable();
-                $table->foreign('place_id')->references('id')->on('places')->onDelete('set null');
+                //$table->foreign('place_id')->references('id')->on('places')->onDelete('set null');
 
                 // Hidden creatures
                 $table->string('group_id')->nullable();
@@ -54,17 +54,17 @@ class CreatePeopleTable extends Migration
                 $table->timestamps();
             });
 
-            Schema::table('people', function (Blueprint $table) {
-                $table->foreign('sire_id')->references('id')->on('people')->onDelete('set null');
-                $table->foreign('demon_id')->references('id')->on('people')->onDelete('set null');
-            });
+            //Schema::table('people', function (Blueprint $table) {
+            //    $table->foreign('sire_id')->references('id')->on('people')->onDelete('set null');
+            //    $table->foreign('demon_id')->references('id')->on('people')->onDelete('set null');
+            //});
         }
         
-        if (Schema::hasTable('places')) {
-            Schema::table('places', function (Blueprint $table) {
-                $table->foreign('boss_id')->references('id')->on('people')->onDelete('set null');
-            });
-        }
+        //if (Schema::hasTable('places')) {
+        //    Schema::table('places', function (Blueprint $table) {
+        //        $table->foreign('boss_id')->references('id')->on('people')->onDelete('set null');
+        //    });
+        //}
     }
 
     /**

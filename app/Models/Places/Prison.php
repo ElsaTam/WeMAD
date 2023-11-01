@@ -2,13 +2,14 @@
 
 namespace App\Models\Places;
 
+use Parental\HasParent;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\People\Person;
 use App\Models\People\Human;
 
 class Prison extends Place
 {
-    protected static $singleTableType = 'prison';
+    use HasParent;
 
     protected $fillable = [
         'security_level'

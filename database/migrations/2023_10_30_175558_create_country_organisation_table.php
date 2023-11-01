@@ -17,9 +17,9 @@ return new class extends Migration
             $table->increments('id', true);
             
             $table->string('country_id')->nullable();
-            $table->foreign('country_id')->references('id')->on('countries')->onDelete('set null');
+            //$table->foreign('country_id')->references('id')->on('countries')->onDelete('set null');
             $table->string('organisation_id')->nullable();
-            $table->foreign('organisation_id')->references('id')->on('organisations')->onDelete('set null');
+            //$table->foreign('organisation_id')->references('id')->on('organisations')->onDelete('set null');
             
             $table->timestamps();
         });

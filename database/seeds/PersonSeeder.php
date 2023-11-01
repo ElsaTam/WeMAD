@@ -45,7 +45,7 @@ class PersonSeeder extends Seeder
 
     private function seed_handmade()
     {
-        include 'handmade\People.php';
+        include 'handmade/People.php';
 
         // ------
         // AGENTS
@@ -111,7 +111,7 @@ class PersonSeeder extends Seeder
 
     private function seed_generated()
     {
-        include 'generated\People.php';
+        include 'generated/People.php';
 
         // Insert everyone without reference to people table
         $people_copy = $people;
@@ -142,7 +142,7 @@ class PersonSeeder extends Seeder
 
     private function update_leaders_generated()
     {
-        include 'generated\Groups.php';
+        include 'generated/Groups.php';
 
         // Add leader to the groups
         foreach ($groups_generated as $group) {
@@ -152,7 +152,7 @@ class PersonSeeder extends Seeder
 
     private function update_leaders_handmade()
     {
-        include 'handmade\Groups.php';
+        include 'handmade/Groups.php';
 
         // Add leader to the groups
         foreach ($groups as $group) {

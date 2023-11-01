@@ -2,13 +2,16 @@
 
 namespace App\Models\People;
 
+use Parental\HasParent;
 use Illuminate\Database\Eloquent\Model;
 
-class Warlock extends HiddenHuman
+class Warlock extends Person
 {
-    protected static $singleTableType = 'warlock';
+    use HasParent;
 
     protected $fillable = [
+        'type',
+        'group_id',
         'demon_id'
     ];
 

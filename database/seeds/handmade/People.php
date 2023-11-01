@@ -276,12 +276,12 @@ $office_bosses = [
 		'demon_id' => NULL,
 	],
 
-	// Devon Devlin
+	// Saul Hopper
     [
-		'id' => 'devondevlin',
+		'id' => 'saulhopper',
 		'type' => 'human',
-		'first_name' => 'Devon',
-		'last_name' => 'Devlin',
+		'first_name' => 'Saul',
+		'last_name' => 'Hopper',
 		'aliases' => NULL,
 		'sex' => 'male',
 		'height' => NULL,
@@ -2102,7 +2102,7 @@ $vampires = [
 		'languages' => 'Anglais',
 		'place_id' => 'office_lasvegas_nv',
 		'group_id' => 'clan_lasvegas',
-		'sire_id' => NULL,
+		'sire_id' => 'calebmagnar',
 		'self_control' => '0',
 		'demon_id' => NULL,
 	],

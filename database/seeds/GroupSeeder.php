@@ -58,10 +58,10 @@ class GroupSeeder extends Seeder
     {
         $this->seed_group_types();
         
-        include 'generated\Groups.php';
+        include 'generated/Groups.php';
         $this->insert_groups($groups_generated); // generated
 
-        include 'handmade\Groups.php';
+        include 'handmade/Groups.php';
         $this->insert_groups($groups); // handmade
     }
 }

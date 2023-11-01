@@ -3,7 +3,7 @@
 namespace App\Models\Groups;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\People\HiddenHuman;
+use App\Models\People\Person;
 use App\Models\People\Vampire;
 use App\Models\People\Warlock;
 use App\Models\People\Werewolf;
@@ -38,7 +38,7 @@ class Group extends Model
      */
     public function leader()
     {
-        return $this->hasOne(HiddenHuman::class, 'id', 'leader_id');
+        return $this->hasOne(Person::class, 'id', 'leader_id');
     }
 
     /**

@@ -15,7 +15,7 @@ class CreateCriminalRecordsTable extends Migration
     {
         Schema::create('criminal_records', function (Blueprint $table) {
             $table->string('person_id')->primary();
-            $table->foreign('person_id')->references('id')->on('people')->onDelete('cascade');
+            //$table->foreign('person_id')->references('id')->on('people')->onDelete('cascade');
             
             $table->boolean('most_wanted')->default(False);
             $table->integer('reward')->nullable();

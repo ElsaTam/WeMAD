@@ -2,17 +2,20 @@
 
 namespace App\Models\Places;
 
-use Nanigans\SingleTableInheritance\SingleTableInheritanceTrait;
+use Parental\HasChildren;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Models\People\Human;
 
 class Place extends Model
 {
-    use SingleTableInheritanceTrait;
+    use HasChildren;
     protected $table = 'places';
-    protected static $singleTableTypeField = 'type';
-    protected static $singleTableSubclasses = [Office::class, Prison::class];
+    protected $childColumn = 'type';
+    protected $childTypes = [
+        'office' => Office::class,
+        'prison' => Prison::class,
+    ];
 
     public $incrementing = false;
     protected $keyType = 'string';
@@ -21,7 +24,8 @@ class Place extends Model
         'id',
         'name',
         'boss_id',
-        'state_id'
+        'state_id',
+        'type'
     ];
 
     // -----------------------------
