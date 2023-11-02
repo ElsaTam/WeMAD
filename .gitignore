@@ -1,4 +1,4 @@
-/bootstrap/cache/*
+/bootstrap/cache/*.php
 /database/*.sqlite
 /database/*.sqlite-journal
 /node_modules
