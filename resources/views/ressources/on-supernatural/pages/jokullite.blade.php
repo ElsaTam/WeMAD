@@ -3,7 +3,7 @@
 
 
 @section('sub-header')
-    <h3 class="p-4 bg-primary text-light text-uppercase fw-bold m-0" id="wantedModalLabel">
+    <h3 class="p-4 bg-primary text-light text-uppercase fw-bold m-0">
         Recherches — La jökullite : un minéral perturbant la magie démoniaque
     </h3>
 @endsection
@@ -51,8 +51,6 @@ $n_tableaux = 1;
             <p>
                 La jökullite a des propriétés particulières sur les énergies démoniaques. En la présence de la roche, ces énergies sont perturbées et altérées de différentes manières. C'est la structure minéralogique des différents minéraux composant la roche qui définit cette perturbation. Les effets peuvent influer la puissance (annulation, affaiblissement, amplification), la trajectoire (attirance, repoussement, déviation), le profil de l'énergie (fragmentation, mélange, filtre) et probablement d'autres pas encore clairement identifiés.
             </p>
-
-            <div id="drug-percentages"></div>
 
             <h3>Caractérisation</h3>
             <p>

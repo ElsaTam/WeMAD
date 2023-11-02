@@ -24,7 +24,7 @@
 @endphp
 
 <div class="card position-sticky card_orga" style="top: 20px;">
-    <div class="card-header font-weight-bold {{ isset($class_name) ? $class_name : '' }} card_orga_name">
+    <div class="card-header fw-bold {{ isset($class_name) ? $class_name : '' }} card_orga_name">
         @isset($organisation)
         {{ $organisation->name }}
         @endisset
@@ -42,7 +42,7 @@
             {!! $organisation->description !!}
             @endisset</li>
         <li class="list-group-item">
-            <span class="font-weight-bold">Pays</span>
+            <span class="fw-bold">Pays</span>
             (<span class="card_orga_countries_number">@isset($organisation){{ count($organisation->countries) }}@endisset</span>) :
             <span class="card_orga_countries">{{ $countries }}</span>
         </li>

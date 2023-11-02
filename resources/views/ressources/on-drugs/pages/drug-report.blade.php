@@ -3,7 +3,7 @@
 
 
 @section('sub-header')
-    <h3 class="p-4 bg-primary text-light text-uppercase fw-bold m-0" id="wantedModalLabel">
+    <h3 class="p-4 bg-primary text-light text-uppercase fw-bold m-0">
         Rapport — Surnaturel dans le trafic de drogues
     </h3>
 @endsection

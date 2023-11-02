@@ -45,4 +45,8 @@ return [
     'vacated' => "Supprimé",
     'pending' => "Procédure en cours",
     'suspended' => "Condamnation avec sursis",
+
+    'report' => 'Rapport',
+    'research' => 'Recherches',
+    'list' => 'Liste',
 ];

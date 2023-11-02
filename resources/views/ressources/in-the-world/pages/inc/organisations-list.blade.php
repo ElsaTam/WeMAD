@@ -1,7 +1,7 @@
 <div class="accordion-item border-bottom border-3">
     <h2 class="accordion-header" id="panelsStayOpen-heading{{ $accordion_id }}">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse{{ $accordion_id }}" aria-expanded="false" aria-controls="panelsStayOpen-collapse{{ $accordion_id }}">
-            <span class="font-weight-bold">{{ $title }}</span>
+            <span class="fw-bold">{{ $title }}</span>
         </button>
     </h2>
     <div id="panelsStayOpen-collapse{{ $accordion_id }}" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-heading{{ $accordion_id }}">

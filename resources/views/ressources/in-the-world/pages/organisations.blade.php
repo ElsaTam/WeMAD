@@ -5,7 +5,7 @@ $organisations = $organisations_danger_0->concat($organisations_danger_1)->conca
 @endphp
 
 @section('sub-header')
-    <h3 class="p-4 bg-primary text-light text-uppercase fw-bold m-0" id="wantedModalLabel">
+    <h3 class="p-4 bg-primary text-light text-uppercase fw-bold m-0">
         Liste - Agences et organisations du Monde Caché
     </h3>
 @endsection
