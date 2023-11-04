@@ -27,7 +27,7 @@
                         <p class="card-text text-center">
                             <span class="fw-bold">{{ $office->boss->sex == "Homme" ? "Directeur" : "Directrice" }} :</span> {{ $office->boss->first_last_name }}
                             <br>
-                            <span class="fw-bold text-secondary">Nombre de Chasseurs :</span> {{ count($office->agents) }}
+                            <span class="fw-bold text-secondary">Nombre de Chasseurs :</span> {{ $office->agents_count }}
                         </p>
                     </div>
                 </div>

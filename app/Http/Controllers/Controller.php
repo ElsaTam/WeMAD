@@ -20,5 +20,9 @@ class Controller extends BaseController
         $current_date = Carbon::parse('2021-02-01'); // yyyy-mm-dd
 
         View::share ( 'current_date', $current_date );
-    }  
+    }
+    
+    protected function debugToConsole($msg) { 
+        echo "<script>console.log(".json_encode($msg).")</script>";
+    }
 }

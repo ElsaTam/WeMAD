@@ -76,7 +76,7 @@
                 <div class="d-flex flex-column flex-wrap" id="hunters">
                     @foreach($office->agents as $index => $agent)
                         <div>
-                            <a href="{{ url('agent/'.$agent->id) }}" class="text-decoration-none">
+                            <a href="{{ url('agents/'.$agent->id) }}" class="text-decoration-none">
                                 {{ $agent->first_last_name }}
                             </a>
                         </div>
@@ -99,7 +99,7 @@
                             </a>
                             <p class="card-text">
                                 <span class="fw-bold">{{ $group->leader->leader_title }} : </span>{{ $group->leader->first_last_name }}<br>
-                                <span class="fw-bold">Membres : </span>{{ $group->members->where('dead', False)->count() }}<br>
+                                <span class="fw-bold">Membres : </span>{{ $group->members_count }}<br>
                             </p>
                         </div>
                         <img src="{{ URL::asset($group->leader->featuredPhoto) }}" alt="" class="card-img-bottom bg-light @if($group->leader->is_prisoner) grayscale @endif">

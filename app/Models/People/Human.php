@@ -16,8 +16,6 @@ class Human extends Person
 
     protected $fillable = [
         'type',
-        'birth_date',
-        'birth_place',
         'hair',
         'eyes',
         'ethnic_group',
@@ -32,7 +30,7 @@ class Human extends Person
 
     public function place()
     {
-        return $this->belongsTo(Place::class, 'place_id');
+        return $this->belongsTo(Place::class, 'place_id', 'id');
     }
 
     
@@ -55,18 +53,6 @@ class Human extends Person
 
     public function getIsMissingAttribute() {
         return $this->status == "missing" && ! $this->dead;
-    }
-
-    public function getAgeAttribute() {
-        $this->disableMutator = True;
-        $age = $this->birth_date ? Date::parse($this->birth_date)->age() : "N/A";
-        $this->disableMutator = False;
-        return $age;
-    }
-
-    public function getBirthDateAttribute($value)
-    {
-        return $this->disableMutator ? $value : ($value ? Date::parse($value)->to_string() : "N/A");
     }
 
     public function getEthnicGroupAttribute($value)

@@ -2002,7 +2002,7 @@ $vampires = [
 		'languages' => 'Anglais',
 		'place_id' => 'office_lasvegas_nv',
 		'group_id' => 'clan_lasvegas',
-		'sire_id' => NULL,
+		'sire_id' => 'vernonlangley',
 		'self_control' => '0',
 		'demon_id' => NULL,
 	],

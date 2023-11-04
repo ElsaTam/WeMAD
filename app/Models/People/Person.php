@@ -11,6 +11,7 @@ use App\Models\Photo;
 use App\Models\Groups\Group;
 use App\Models\Records\CriminalRecord;
 use App\Models\Records\PrisonerRecord;
+use App\Custom\Date;
 
 class Person extends Model
 {
@@ -34,6 +35,8 @@ class Person extends Model
         'kind',
         'first_name',
         'last_name',
+        'birth_date',
+        'birth_place',
         'sex',
         'height',
         'weight',
@@ -112,6 +115,18 @@ class Person extends Model
     public function getLastFirstNameAttribute()
     {
         return strtoupper($this->last_name)." ".$this->first_name;
+    }
+
+    public function getBirthDateAttribute($value)
+    {
+        return $this->disableMutator ? $value : ($value ? Date::parse($value)->to_string() : "N/A");
+    }
+
+    public function getAgeAttribute() {
+        $this->disableMutator = True;
+        $age = $this->birth_date ? Date::parse($this->birth_date)->age() : "N/A";
+        $this->disableMutator = False;
+        return $age;
     }
 
     public function getIsHiddenCreatureAttribute()

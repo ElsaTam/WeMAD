@@ -51,7 +51,7 @@ class Group extends Model
 
     public function members()
     {
-        switch ($this->type->id) {
+        switch ($this->group_type_id) {
             case "clan":
                 return $this->hasMany(Vampire::class, 'group_id', 'id');
             case "circle":

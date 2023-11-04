@@ -43,7 +43,17 @@ class PersonController extends Controller
     }
 
     public function getPerson($id) {
-        $person = Person::find($id);
+        $person = Person::with([
+                'place:id,state_id,name,type' => [
+                    'state:id,name'
+                ]
+            ])
+            ->select('id','first_name','last_name','aliases','type',
+                     'sex','dead','birth_date','birth_place',
+                     'height','weight','hair','eyes','ethnic_group',
+                     'status','languages','place_id',
+                     'group_id','sire_id','self_control','demon_id')
+            ->find($id);
 
         switch ($person->status) {
             case 'wanted':

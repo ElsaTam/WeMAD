@@ -13,7 +13,7 @@ use App\Custom\Date;
 
         @include('inc.back-link', ["url" => $group->office->link])
         
-        <h3 class="text-center @isset($group->leader->place->prison) text-decoration-line-through @endisset">{{ $group->full_name }}</h3>
+        <h3 class="text-center">{{ $group->full_name }}</h3>
 
         <div class="row row-cols-auto g-4 justify-content-center photo-gallery mt-0">
             @foreach($members as $member)
@@ -24,7 +24,7 @@ use App\Custom\Date;
                             <p class="card-text text-info">
                                 <span class="text-dark">
                                     <a href="{{ url($member->link) }}" class="stretched-link text-decoration-none link-dark">{{ $member->first_last_name }}</a>
-                                    @if($member->is_leader)
+                                    @if($member->id == $group->leader_id)
                                         (<span class="card-text fw-bold">{{ $member->leader_title }}</span>)
                                     @endif
                                 </span>
