@@ -16,17 +16,20 @@ use App\Custom\StringHelpers;
     <div class="d-flex flex-column gap-2">
         <h5 class="my-3">
             {{ $civilian->title }} {{ $civilian->first_last_name }}
+            @if ($civilian->dead)
+            <span class="badge bg-dark p-2"><i class="fa-solid fa-skull me-2 fa-lg"></i> Mort</span>
+            @endif
         </h5>
 
         <div>
             <i class="fa-solid fa-location-pin me-2"></i>
-            Agence de référence : <a href="{{url($civilian->place->link)}}">{{ $civilian->place->fullname }}</a>
+            @if ($civilian->dead)Dernière agence @else Agence @endif de référence : <a href="{{url($civilian->place->link)}}">{{ $civilian->place->fullname }}</a>
         </div>
 
         @if ($civilian->is_hidden_creature)
             <div>
                 <i class="fa-solid fa-users-between-lines me-2"></i>
-                @if (isset($civilian->group))
+                @if (@isset($civilian->group))
                     <a href="{{ url($civilian->group->link) }}">{{ $civilian->group->fullname }}</a>
                 @else
                     <span class="bg-warning py-1 px-2">Renégat</span>

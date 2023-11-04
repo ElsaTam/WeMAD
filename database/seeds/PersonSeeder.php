@@ -67,9 +67,9 @@ class PersonSeeder extends Seeder
 
         // Vampire
         $vampires_copy = $vampires;
-        foreach ($vampires_copy as $key => $vampire) {
-            $vampires_copy[$key]['sire_id'] = NULL;
-        }
+        //foreach ($vampires_copy as $key => $vampire) {
+        //    $vampires_copy[$key]['sire_id'] = NULL;
+        //}
         DB::table('people')->insert($vampires_copy);
         // Add sires (for vampires)
         $vampires_copy = array_filter($vampires, function ($vampire) {
