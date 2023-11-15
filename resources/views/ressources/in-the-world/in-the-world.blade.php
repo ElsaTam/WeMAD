@@ -14,7 +14,7 @@
 @section('content')
 
 <div class="container py-4">
-    @include("ressources.inc.page-card", ["title" => "Liste - Agences et organisations du Monde Caché", "link" => "in-the-world/organisations", "type" => "list"])
+    @include("ressources.inc.page-card", ["title" => "Agences et organisations du Monde Caché", "link" => "in-the-world/organisations", "type" => "list"])
 </div>
 
 @endsection
