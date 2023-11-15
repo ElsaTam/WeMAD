@@ -26,6 +26,7 @@
         "node-fetch": "^2.6.7",
         "plotly.js-dist": "^2.12.1",
         "request": "^2.88.2",
+        "safe-eval": "^0.4.1",
         "translate-api": "^0.3.18"
     }
 }
