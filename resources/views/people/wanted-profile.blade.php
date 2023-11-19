@@ -57,7 +57,7 @@
             @endif
 
             @if(! is_null($wanted->criminalRecord->danger))
-            <h5 class="text-center text-uppercase text-danger fw-bold">{{$wanted->criminalRecord->danger}}</h5>
+            <h5 class="text-center text-uppercase text-danger fw-bold">{!! $wanted->criminalRecord->danger !!}</h5>
             @endif
             
             <hr>
