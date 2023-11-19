@@ -45,7 +45,7 @@ class PhotoSeeder extends Seeder
         
         $agents = array_merge($office_bosses, $hunters);
 
-        $types = ['agents', 'vampires', 'warlocks', 'werewolves', 'wanteds'];
+        $types = ['agents', 'vampires', 'warlocks', 'werewolves', 'wanteds', 'demons'];
 
         foreach ($types as $type) {
             foreach (${$type} as $person) {

@@ -95,6 +95,9 @@ class PersonSeeder extends Seeder
         
         // Werewolves
         DB::table('people')->insert($werewolves);
+        
+        // Demons
+        DB::table('people')->insert($demons);
 
         // ------
         // WANTED

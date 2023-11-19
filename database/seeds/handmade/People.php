@@ -3192,3 +3192,21 @@ $prisoners = [
 		'demon_id' => NULL,
 	],
 ];
+
+$demons = [
+	// L'Illusionniste
+    [
+		'id' => 'phantasme',
+		'type' => 'demon',
+		'first_name' => 'Phantasme',
+		'last_name' => '',
+		'aliases' => 'Phantasme, Éphémeros, L\'Illusionniste, Le Forgeur de Liens, Aetheron, Révéro, Deceptra, Le Semeur, Le Tisserand des Pactes',
+		'sex' => NULL,
+		'height' => '200',
+		'weight' => NULL,
+		'status' => 'wanted',
+		'dead' => '0',
+		'birth_date' => NULL,
+		'birth_place' => NULL
+	],
+];

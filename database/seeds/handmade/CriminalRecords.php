@@ -151,4 +151,33 @@ $criminal_records = [
         'danger' => 'A considerer extrêmement dangereux'
     ],
   
+	// Phantasme (l'Illusionniste)
+    [
+        'person_id' => 'phantasme',
+        'most_wanted' => false,
+        'reward' => '10000',
+        'remarks' => "
+            <p>
+                <span class='fw-bold'>Description</span> : Phantasme est un démon majeur connu pour sa ruse et sa capacité à manipuler la perception des individus et à les pousser à pactiser avec lui. Son apparence humaine varie, selon l'apparence qu'il doit avoir pour mieux tromper ses victimes.
+            </p>
+            <p>
+                <span class='fw-bold'>07/03/1937</span> : Phantasme a contacté de lui-même l'agence d'Italie qui avait arrêté un cardinal de l'Eglise catholique suspecté de traîter avec le surnaturel. Il s'est présenté sans violence aux portes des bureau de Milan, sous forme humaine mais sans nier être un démon, mais prévenant que la vie du nouveau Pape Pie XII ne tenait qu'à l'assurance de sa liberté. Il a ensuite négocié la libération du cardinal avec la condition qu'il soit révoqué de l'Eglise catholique. En échange, il assura que le nazisme ne prendrait pas la main mise sur l'Eglise, à une époque où le surnaturel était suspecté d'être utilisé dans plusieurs idéologies mais sans pouvoir bien encore cerner ses implications. L'accord fut passé. Le 10 mars, trois jours après, le pape Pie XI publie l'encyclique <span class='fst-italic'>Mit brennender Sorge</span> dénonçant, pour résumer, le nazisme et le non-respect du concordat du 20 juillet 1933. Plusieurs années plus tard, une enquête montrera que l'ancien cardinal a tout de même pu utiliser son influence au sein du Vatican et a permis à Phantasme de profiter des persécutions anti-catholiques qui ont fait suite à l'encyclique pour étendre son influence en Europe de l'Est grâce, notamment, à des possessions démoniaques. Il aura fallut plus de 20 ans pour remettre en place un réseau d'exorcistes efficaces.
+            </p>
+            <p>
+                <span class='fw-bold'>14/06/1952</span> : Phantasme est intervenu en Inde pour arrêter les actions d'un démon sous ses ordres. Son subalterne devait accorder un nombre massif de disciples et de fidèles à un gourou spirituel, ce qu'il fit. Mais il commença à développer des ambitions personnelles et à utiliser l'influence et les dettes de ce gourou pour ses propres desseins. Grâce à ses illusions, Phantasme fit croire à l'enlèvement d'une personnalité publique importante, déclenchant une chasse à l'homme et menant le MIA sur les traces du démon subalterne, menant à son exécution, ainsi qu'à l'accomplissement d'un faux avertissement que le gourou avait prononcé, renforçant sa popularité et sa dette envers Phantasme.
+            </p>
+            <p>
+                <span class='fw-bold'>14/08/1991</span> : Un groupe d'agents russes ont essayé de piéger Phantasme. L'un d'entre eux a passé un accord avec lui puis a tenu sa couverture pendant plusieurs mois. Début août 1991, l'agent doit rencontrer Phantasme en personne et une équipe d'intervention est mise en place. Phantasme est bien capturé, mais quelques jours après, un coup d'état est mené contre Gorbachev. Avec le trouble causé au sein de l'URSS, l'agitation a été telle que Phantasme n'a pas pu être bien gardé et a réussi à s'échapper, peut-être en négociant avec un agent. Plus tard, une enquête montrera que Phantasme lui-même avait prévu la possibilité de se faire arrêter et planifié le début de la chute de l'URSS. Directement ou indirectement, il avait le contrôle sur le Général du KGB. En lui donnant l'ordre d'agir le 18 août pour renverser Gorbachev, 4 jours après sa rencontre avec l'agent russe sous couverture, il s'assurait une période agitée en cas d'arrestation,tout en gardant le temps pour annuler l'ordre au cas où il n'y ait aucun piège.
+            </p>
+            <p>
+                <span class='fw-bold'>18/11/2009</span> : Phantasme a créé une série d'illusions macabres dans des foyers de Londres, trompant les passants en leur faisant croire qu'ils étaient témoins de scènes d'horreur, semant la panique. Il avait permis à un homme d'obtenir une expansion rapide de son entreprise de sécurité avec des profits record. L'homme devait en échange lui livrer une entreprise rivale en faillite et des employés clés. Mais il a essayé de tromper Phantasme et de se défaire de leur accord. Après les incidents, l'entreprise a sombré, Phantasme ayant visé la majorité de ses des clients. Bien qu'il ait été aperçu et qu'une équipe du MI12ait pu discuter avec lui, il n'a pas été neutralisé car \"cela aurait entraîné des répercussions incontrôlables\".
+            </p>
+            <p>
+                <span class='fw-bold'>02/12/2021</span> : Phantasme est libéré d'un plan où il avait été enfermé par un sorcier. A ce moment-là, Phantasme se trouve être le seul capable de rejoindre un autre plan fermé à tout autres portails, où une sorcière séquestre et torture un homme qu'il a lui-même altéré. Le sorcier passe, par l'intermédiaire d'agents, un accord avec Phantasme en lui promettant de se livrer à lui s'il permet la libération de l'homme. Dans la possibilité d'assurer à la fois la sécurité de l'Altéré et celle du sorcier, les agents sauvent l'Altéré et arrête la sorcière, mais le sorcier est emmené dans la plan démoniaque avec Phantasme. Ses objectifs avec cette capture sont encore inconnues.
+            </p>
+        ",
+        'caution' => "Phantasme est connu pour ses illusions ainsi que ses propositions de pacte. En aucun cas un agent ne doit croire ce qu'il offre et ne doit accepter le moindre accord avec lui. Cependant, il est impossible de savoir exactement jusqu'où s'étend son influence et les menaces (ou avertissements) qu'il peut faire pourraient être réelles.",
+        'danger' => 'A considerer extrêmement dangereux.<br>A capturer vivant.'
+    ],
+  
 ];

@@ -62,8 +62,10 @@
             
             <hr>
 
+            @isset($wanted->place)
             <p class="fw-bold">Si vous avez des informations concernant cette personne, veuillez contacter votre bureau local du WeMAD ou de l'Ordre le plus proche.</p>
             <p><span class="fw-bold">Bureau : </span><a href="{{ url($wanted->place->link) }}">{{$wanted->place->fullname}}</a></p>
+            @endisset
         </div>
     </div>
 
