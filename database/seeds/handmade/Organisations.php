@@ -26,6 +26,18 @@ $organisations_0 = [
 		'created_at' => NULL,'updated_at' => NULL
 	],
 	[
+		'id' => "organisation_wo_cosmoss",
+		'name' => "Committee for the Study, Masking and Oversight of the Supernatural in Space",
+		'name_fr' => "Comité d'Étude, de Masquage et de Surveillance du Surnaturel dans l'Espace",
+		'acronym' => "CoSMOSS",
+		'danger_level' => 0,
+		'security_index' => 5,
+		'part_of_ugb' => true,
+		'countries' => ['WO'],
+		'description' => "Regroupement de scientifiques travaillant dans différentes agences de recherche spatiale. Ils ont pour objectif d’étudier le surnaturel dans l’espace, de prévenir sa découverte par le reste de l’humanité, et de surveiller ses possibles dangers.",
+		'created_at' => NULL,'updated_at' => NULL
+	],
+	[
 		'id' => "organisation_ca_chwis",
 		'name' => "Canadian Hidden World Investigation Services",
 		'name_fr' => "Services Canadiens d'Enquête du Monde Caché",
@@ -473,6 +485,54 @@ $organisations_2 = [
 		'part_of_ugb' => false,
 		'countries' => ['CO'],
 		'description' => "Groupe paramilitaire associé à un cartel de drogues. De 2003 à 2006, l'AUC (groupe paramilitaire d'extrême-droite) est dissoute mais plusieurs membres, opposés à cette entente avec le gouvernement, décident de créer leurs propres groupes paramilitaires. Parmi eux, la Sombra Roja qui dit protéger la population en appliquant une tolérance zéro sur les créatures surnaturelles à problème, en se passant de jugement. Les assassinats et les tortures font partie de ses pratiques courantes pour atteindre ses objectifs, même sur des humains. Il y a de plus un risque non négligeable que cette organisation commence à considérer l'usage du surnaturel dans leur cartel de drogue.",
+		'created_at' => NULL,'updated_at' => NULL
+	],
+	[
+		'id' => "organisation_br_ashs",
+		'name' => "Agência de Segurança Humana Sobrenatural",
+		'name_fr' => "Agence de Sécurité des Humains Surnaturels",
+		'acronym' => "ASHS",
+		'danger_level' => 1,
+		'security_index' => 17,
+		'part_of_ugb' => false,
+		'countries' => ['BR'],
+		'description' => "Agence gouvernementale chargée d’assurer la protection et l’accompagnement des humains liés au surnaturel. Au brésil, les humains pratiquant la magie ainsi que les humains transformés (tels que les loup-garous, les vampires ou les altérés) sont considérés comme des citoyens du pays. Ils peuvent également être employés au sein de l’ASHS. Les individus nés surnaturels, tels que les sorciers ou les fées, sont en revanche tout juste tolérés lors d’un passage dans le pays où ils ne sont pas considérés comme des citoyens. De fait, la relation entre l’ASHS et les <a class='orga_danger_0' data-orga-ref='organisation_br_sfd'>Sentinelas da Floresta Dourada</a> est délicate et très tendue. Le gouvernement brésilien n’offre aucune aide à la gestion de la Grande Réserve sur son pays, et essaie même de rendre son fonctionnement impossible. Mais ils sont principalement occupés par les <a class='orga_danger_2' data-orga-ref='organisation_br_sf'>Sem-Forma</a> qu’ils essaient de chasser hors du Brésil.",
+		'created_at' => NULL,'updated_at' => NULL
+	],
+	[
+		'id' => "organisation_br_sfd",
+		'name' => "Sentinelas da Floresta Dourada",
+		'name_fr' => "Sentinelles de la Forêt d'Or",
+		'acronym' => "",
+		'danger_level' => 0,
+		'security_index' => 12,
+		'part_of_ugb' => true,
+		'countries' => ['BR'],
+		'description' => "Les Sentinelles étaient originellement un groupe lié à l’El Dorado, bien qu’il soit incertain de savoir s’ils le cherchaient ou le protégeaient. Aujourd’hui, ils assurent le fonctionnement et la protection de la Grande Réserve Féerique du Brésil, qu’ils nomment “La Forêt d’Or”. Leur présence est contestée par l’<a class='orga_danger_1' data-orga-ref='organisation_br_ashs'>ASHS</a>, et bien qu’aucune opération violente n’ait été menée pour l’instant, les relations entre les deux organismes sont tendues.",
+		'created_at' => NULL,'updated_at' => NULL
+	],
+	[
+		'id' => "organisation_br_sf",
+		'name' => "Sem-Forma",
+		'name_fr' => "Les Sans-Forme",
+		'acronym' => "",
+		'danger_level' => 2,
+		'security_index' => -27,
+		'part_of_ugb' => false,
+		'countries' => ['BR'],
+		'description' => "Avec l’absence du Pilier et donc de Cercles sur l’entièreté du territoire du Brésil, des sorciers opposants au Pilier se sont organisés dans le pays, sous le nom des Sans-Forme. Ils luttent activement contre le Pilier, principalement dans les plans intermédiaires de ceux-ci sans tomber dans la juridiction d’aucune organisation terrestre. Outre leur lutte contre le Pilier, les membres ne sont pas organisés autour d’un autre objectif et chacun vit sa propre vie. Il s’agit principalement de criminels, s’adonnant à des activités illégales. Certains disent cependant agir pour la population et endossent des rôles inspirés des Super-héros de films. Tous considérés comme hors-la-loi par l’<a class='orga_danger_1' data-orga-ref='organisation_br_ashs'>ASHS</a>, ils sont pourchassés par celle-ci qui n’hésite pas à envoyer des altérés ou des vampires formés à la magie contre les Sans-Forme.",
+		'created_at' => NULL,'updated_at' => NULL
+	],
+	[
+		'id' => "organisation_bo_vue",
+		'name' => "Vagabundos de la Undécima Estrella",
+		'name_fr' => "Les Vagabonds de la Onzième Étoile",
+		'acronym' => "",
+		'danger_level' => 0,
+		'security_index' => 36,
+		'part_of_ugb' => true,
+		'countries' => ['BO'],
+		'description' => "ou juste La Undécima Estrella (La Onzième Etoile). Les nombreux coups d'État ayant eu lieu en Bolivie depuis son indépendance (190 coups entre 1825 et 1985) ont rendu impossible la gestion du surnaturel par l'État. L’organisme gouvernemental qui en était responsable sous l’empire espagnol a fini par s’en dissocier. La onzième étoile représente le Monde Caché de la Bolivie, une étoile absente de l’emblème du pays qui en contient une pour chacun de ses 10 départements. Pendant toutes ces années de mouvements politiques, les Vagabonds de la Onzième Étoile ont toujours su réagir rapidement et prévenir l’utilisation du surnaturel dans les différents conflits.",
 		'created_at' => NULL,'updated_at' => NULL
 	]
 ];
