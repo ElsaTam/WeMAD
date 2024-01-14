@@ -15,7 +15,7 @@ use App\Custom\StringHelpers;
     <img src="{{ URL::asset($agent->featuredPhoto) }}" style="width: 250px; object-fit: cover;">
     <div class="d-flex flex-column gap-2">
         <h5 class="my-3">
-            {{ $agent->sex == "Homme" ? "Mr." : "Mme." }} <span class="text-uppercase">{{ $agent->last_name }}</span> {{ $agent->first_name }}
+            {{ $agent->title }} <span class="text-uppercase">{{ $agent->last_name }}</span> {{ $agent->first_name }}
         </h5>
         
         <div>
