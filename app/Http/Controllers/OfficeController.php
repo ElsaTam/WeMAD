@@ -32,7 +32,7 @@ class OfficeController extends Controller
         return Office::whereHas('state', function (Builder $query) use ($council_name) {
             $query->where('council', $council_name);
         })
-        ->with(['boss:id,first_name,last_name'])
+        ->with(['boss:id,first_name,last_name,sex'])
         ->select('id','name','state_id','boss_id','type')
         ->withCount('agents')
         ->orderBy('state_id')
@@ -66,7 +66,7 @@ class OfficeController extends Controller
     public function getOffice($id) {
         $office = Office::where('id', $id)
             ->with('agents:id,place_id,first_name,last_name')
-            ->with('boss:id,first_name,last_name')
+            ->with('boss:id,first_name,last_name,sex')
             ->with('state:id,name')
             ->select('id','name','boss_id','state_id')
             ->get()[0];
