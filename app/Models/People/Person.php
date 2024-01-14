@@ -139,7 +139,7 @@ class Person extends Model
 
     public function getSexAttribute($value)
     {
-        return $this->value ? ($this->disableMutator ? $value : trans('database.'.$value)) : "N/A";
+        return $value ? ($this->disableMutator ? $value : trans('database.'.$value)) : "N/A";
     }
 
     public function getTypeAttribute($value)
